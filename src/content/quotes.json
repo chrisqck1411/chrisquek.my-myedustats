@@ -1,0 +1,61 @@
+{
+  "about": "Quotes shown on the 404 page. Every quote needs a source link and is checked by scripts/check-quotes.mjs during the build. Rules approved by Chris on 23 Nov 2026: every quote verified against a real source; mix of Malaysian and international figures; no sitting politicians; original language shown, and a translation only where a sourced one exists (never translated by us); short quotes with attribution; older or public-domain sources preferred. Only the four international quotes are approved so far; Malaysian figures are to be added later after verification.",
+  "fallback": "malala-2013",
+  "quotes": [
+    {
+      "id": "malala-2013",
+      "text": "One child, one teacher, one book and one pen can change the world.",
+      "language": "en",
+      "author": "Malala Yousafzai",
+      "work": "Speech to the UN Youth Assembly, New York",
+      "date": "12 July 2013",
+      "sourceUrl": "https://awpc.cattcenter.iastate.edu/?p=24168",
+      "sourceLabel": "Transcript (Iowa State University, American Women's Public Speech archive); also reported by the AP and UN News",
+      "sittingPolitician": false,
+      "note": "UN News words it slightly shorter; the transcript wording is used."
+    },
+    {
+      "id": "mandela-2003",
+      "text": "Education is the most powerful weapon we can use to change the world.",
+      "language": "en",
+      "author": "Nelson Mandela",
+      "work": "Speech at the launch of Mindset Network, Johannesburg",
+      "date": "16 July 2003",
+      "sourceUrl": "https://archive.nelsonmandela.org/index.php/za-com-mr-s-909",
+      "sourceLabel": "Nelson Mandela Foundation archive, item ZA COM MR-S-909",
+      "sittingPolitician": false,
+      "note": "The widely shared version with 'which you can use' is not the wording in the Foundation's transcript."
+    },
+    {
+      "id": "mann-1848",
+      "text": "Education, then, beyond all other devices of human origin, is the great equalizer of the conditions of men, the balance-wheel of the social machinery.",
+      "language": "en",
+      "author": "Horace Mann",
+      "work": "Twelfth Annual Report to the Massachusetts Board of Education (Report No. 12)",
+      "date": "1848",
+      "sourceUrl": "https://faculty.etsu.edu/history/documents/hmann.htm",
+      "sourceLabel": "Transcription of Report No. 12, East Tennessee State University",
+      "sittingPolitician": false,
+      "note": "Public domain. The source page gives no page number."
+    },
+    {
+      "id": "confucius-analects-15-39",
+      "text": "In teaching there should be no distinction of classes.",
+      "language": "en",
+      "original": { "text": "子曰：「有教無類。」", "language": "zh-Hant" },
+      "originalSourceUrl": "https://ctext.org/analects/wei-ling-gong",
+      "translation": {
+        "translator": "James Legge",
+        "year": 1893,
+        "sourceUrl": "https://monadnock.net/confucius/analects-15.html"
+      },
+      "author": "Confucius",
+      "work": "Analects, book 15 (Wei Ling Gong), chapter 39 (chapter 38 in Legge's numbering)",
+      "date": "about 5th century BCE",
+      "sourceUrl": "https://monadnock.net/confucius/analects-15.html",
+      "sourceLabel": "Analects, translated by James Legge (1893)",
+      "sittingPolitician": false,
+      "check": "The Chinese characters were confirmed from secondary pages only, because ctext.org could not be opened when this was logged. Open the ctext link once to confirm."
+    }
+  ]
+}

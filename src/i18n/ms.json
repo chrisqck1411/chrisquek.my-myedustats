@@ -15,10 +15,14 @@
   "role.parent": "Ibu bapa",
   "role.policymaker": "Penggubal dasar",
   "role.teacher": "Guru",
+  "mascot.alt": "Maskot MyEduStats, seekor tapir yang mesra",
   "footer.data": "Data daripada data.gov.my, berlesen CC BY 4.0.",
   "footer.unofficial": "Tidak rasmi. Tiada kaitan dengan mana-mana agensi kerajaan.",
   "footer.feedback": "Maklum balas",
   "notfound.title": "Halaman tidak ditemui",
   "notfound.text": "Halaman ini tidak wujud atau telah dipindahkan.",
-  "notfound.home": "Pergi ke halaman utama"
+  "notfound.home": "Pergi ke halaman utama",
+  "notfound.choose": "Pilih bahasa anda",
+  "quote.source": "Sumber",
+  "quote.translation": "Terjemahan"
 }

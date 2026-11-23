@@ -5,48 +5,54 @@ interface Props {
   lang: Lang;
   /** Page path without language prefix, e.g. "" for the home page. */
   path: string;
+  /** Page-not-found page: only the logo and the theme button, no language-specific controls. */
+  minimal?: boolean;
 }
 
-const { lang, path } = Astro.props;
+const { lang, path, minimal = false } = Astro.props;
+const both = (key: 'theme.toDark' | 'theme.toLight') => `${t('en', key)} / ${t('ms', key)}`;
+const darkLabel = minimal ? both('theme.toDark') : t(lang, 'theme.toDark');
+const lightLabel = minimal ? both('theme.toLight') : t(lang, 'theme.toLight');
 const other: Lang = lang === 'en' ? 'ms' : 'en';
 ---
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href={pathFor(lang, '')}>
-      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-        <rect class="bar-a" x="5" y="16" width="6" height="11" rx="1.5"></rect>
-        <rect class="bar-b" x="13" y="9" width="6" height="18" rx="1.5"></rect>
-        <rect class="bar-a" x="21" y="4" width="6" height="23" rx="1.5"></rect>
-      </svg>
+    <a class="brand" href={pathFor(lang, '')} data-nf-home={minimal ? '' : undefined}>
+      <img class="brand-logo" src="/logo.svg" width="40" height="40" alt="" />
       <span>{t(lang, 'site.name')}</span>
     </a>
 
     <div class="controls" role="group" aria-label={t(lang, 'nav.label')}>
+      {!minimal && (
       <label class="role-field">
         <span>{t(lang, 'role.label')}</span>
         <select id="role" name="role">
           {ROLES.map((role) => <option value={role}>{t(lang, `role.${role}` as const)}</option>)}
         </select>
       </label>
+      )}
 
+      {!minimal && (
       <a
         class="control"
         href={pathFor(other, path)}
         hreflang={other}
         lang={other}
+        data-set-lang={other}
         aria-label={t(lang, 'lang.switch')}
       >
         {t(lang, 'lang.short')}
       </a>
+      )}
 
       <button
         type="button"
         id="theme-toggle"
         class="theme-toggle"
-        aria-label={t(lang, 'theme.toDark')}
-        data-label-dark={t(lang, 'theme.toDark')}
-        data-label-light={t(lang, 'theme.toLight')}
+        aria-label={darkLabel}
+        data-label-dark={darkLabel}
+        data-label-light={lightLabel}
       >
         <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>

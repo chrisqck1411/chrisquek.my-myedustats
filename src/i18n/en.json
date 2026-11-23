@@ -15,10 +15,14 @@
   "role.parent": "Parent",
   "role.policymaker": "Policymaker",
   "role.teacher": "Teacher",
+  "mascot.alt": "MyEduStats mascot, a friendly tapir",
   "footer.data": "Data from data.gov.my, licensed CC BY 4.0.",
   "footer.unofficial": "Unofficial. Not affiliated with any government agency.",
   "footer.feedback": "Feedback",
   "notfound.title": "Page not found",
   "notfound.text": "This page does not exist or has moved.",
-  "notfound.home": "Go to the home page"
+  "notfound.home": "Go to the home page",
+  "notfound.choose": "Choose your language",
+  "quote.source": "Source",
+  "quote.translation": "Translation"
 }

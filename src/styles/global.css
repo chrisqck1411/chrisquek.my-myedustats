@@ -11,10 +11,12 @@
   --primary: #0b5cab;
   --primary-contrast: #ffffff;
   --accent: #0b7a5e;
+  --heading: #0b3d6b;
+  --mascot-bg: #e3f0fa;
   --focus: #0b5cab;
-  --radius: 10px;
+  --radius: 14px;
   --max: 68rem;
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+  --font: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
 }
 
 :root[data-theme="dark"] {
@@ -27,6 +29,8 @@
   --primary: #79b8ff;
   --primary-contrast: #0d1620;
   --accent: #4fcfa4;
+  --heading: #e8eff5;
+  --mascot-bg: #2b4a66;
   --focus: #79b8ff;
 }
 
@@ -45,6 +49,8 @@
     --primary: #79b8ff;
     --primary-contrast: #0d1620;
     --accent: #4fcfa4;
+    --heading: #e8eff5;
+    --mascot-bg: #2b4a66;
     --focus: #79b8ff;
   }
 }
@@ -92,6 +98,7 @@ a:hover { text-decoration-thickness: 2px; }
 /* Header */
 .site-header {
   background: var(--surface);
+  border-top: 4px solid var(--primary);
   border-bottom: 1px solid var(--border);
 }
 .site-header .wrap {
@@ -109,13 +116,11 @@ a:hover { text-decoration-thickness: 2px; }
   gap: 0.6rem;
   min-height: 44px;
   font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--text);
+  font-size: 1.35rem;
+  color: var(--heading);
   text-decoration: none;
 }
-.brand svg { width: 32px; height: 32px; flex: none; }
-.brand .bar-a { fill: var(--primary); }
-.brand .bar-b { fill: var(--accent); }
+.brand-logo { width: 40px; height: 40px; flex: none; border-radius: 50%; }
 
 .controls {
   display: flex;
@@ -158,6 +163,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* Main */
 main { flex: 1; padding: 2rem 0 3rem; }
+h1, h2, h3 { color: var(--heading); font-weight: 700; }
 h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.15; margin: 0 0 0.75rem; }
 .lead { font-size: 1.2rem; color: var(--muted); max-width: 40rem; margin: 0 0 1.5rem; }
 .notice {
@@ -168,6 +174,70 @@ h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.15; margin: 0 0 0.75r
   border-left: 5px solid var(--accent);
   border-radius: var(--radius);
 }
+
+/* Home hero: the mascot faces right, toward the text beside it */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 250px) minmax(0, 1fr);
+  gap: 2rem 2.5rem;
+  align-items: center;
+}
+.hero-mascot { position: relative; width: 100%; max-width: 250px; }
+.hero-mascot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--mascot-bg);
+}
+.hero-mascot img { position: relative; display: block; width: 100%; height: auto; }
+@media (max-width: 40rem) {
+  .hero { grid-template-columns: 1fr; justify-items: start; }
+  .hero-mascot { max-width: 190px; }
+}
+
+/* 404 language views. Each part of the page-not-found page names its view in data-v ("en", "ms",
+   "choose"). public/lang-init.js sets html[data-nf] to "en" or "ms"; without scripts there is no
+   data-nf, so only the "choose" parts (the language chooser) show. */
+:root:not([data-nf]) [data-v]:not([data-v~="choose"]),
+:root[data-nf="en"] [data-v]:not([data-v~="en"]),
+:root[data-nf="ms"] [data-v]:not([data-v~="ms"]) { display: none; }
+.nf-dot { margin: 0 0.35rem; color: var(--muted); }
+.nf-choices { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0; }
+.nf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  min-width: 11rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-contrast);
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+.nf-button:hover { filter: brightness(1.1); }
+.nf-other { margin: 0; }
+.nf-foot + .nf-foot { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+
+/* 404 quote */
+.notfound-quote { margin-top: 2.5rem; }
+.quote { margin: 0; }
+.quote[hidden] { display: none; }
+.quote blockquote {
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0 0.25rem 1.1rem;
+  border-left: 4px solid var(--accent, var(--primary));
+}
+.quote blockquote p { margin: 0; font-size: 1.35rem; line-height: 1.45; color: var(--heading); }
+.quote .quote-original { font-size: 1.6rem; margin-bottom: 0.4rem; }
+.quote figcaption { color: var(--muted); font-size: 0.95rem; max-width: 40rem; }
 
 /* Footer */
 .site-footer {
@@ -216,9 +286,11 @@ main h2 { margin: 2rem 0 0.75rem; font-size: 1.4rem; }
 }
 
 @media (max-width: 40rem) {
-  .controls { width: 100%; }
-  .role-field { flex: 1 1 100%; }
-  .role-field select { flex: 1; }
+  .controls { width: 100%; flex-wrap: nowrap; }
+  .site-header .wrap:has(.controls > :only-child) .controls { width: auto; }
+  .role-field { flex: 1 1 auto; min-width: 0; }
+  .role-field span { white-space: nowrap; }
+  .role-field select { flex: 1; min-width: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
