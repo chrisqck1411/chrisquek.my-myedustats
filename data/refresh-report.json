@@ -1,0 +1,78 @@
+{
+ "generated_at": "2026-11-23T03:36:09.583Z",
+ "changed_datasets": [
+  "schools_district",
+  "enrolment_school_district",
+  "teachers_district",
+  "completion_school_state",
+  "completion_school_district",
+  "lecturers_uni"
+ ],
+ "datasets": {
+  "schools_district": {
+   "rows": 4514,
+   "added_rows": 4514,
+   "revised_values": 0,
+   "data_as_of": "2025",
+   "last_updated": "2026-10-11 12:00",
+   "flags": {},
+   "totals_that_do_not_add_up": 0
+  },
+  "enrolment_school_district": {
+   "rows": 12756,
+   "added_rows": 12756,
+   "revised_values": 0,
+   "data_as_of": "2025",
+   "last_updated": "2026-08-03 12:00",
+   "flags": {},
+   "totals_that_do_not_add_up": 0
+  },
+  "teachers_district": {
+   "rows": 8805,
+   "added_rows": 8805,
+   "revised_values": 0,
+   "data_as_of": "2025",
+   "last_updated": "2026-08-03 12:00",
+   "flags": {},
+   "totals_that_do_not_add_up": 0
+  },
+  "completion_school_state": {
+   "rows": 1530,
+   "added_rows": 1530,
+   "revised_values": 0,
+   "data_as_of": "2025",
+   "last_updated": "2026-10-11 12:00",
+   "flags": {
+    "over_100": 262
+   },
+   "totals_that_do_not_add_up": 0
+  },
+  "completion_school_district": {
+   "rows": 2355,
+   "added_rows": 2355,
+   "revised_values": 0,
+   "data_as_of": "2025",
+   "last_updated": "2026-10-11 12:00",
+   "flags": {
+    "over_100": 529,
+    "blank": 5
+   },
+   "totals_that_do_not_add_up": 0
+  },
+  "lecturers_uni": {
+   "rows": 2700,
+   "added_rows": 2700,
+   "revised_values": 0,
+   "data_as_of": "2025",
+   "last_updated": "2026-10-11 12:00",
+   "flags": {},
+   "totals_that_do_not_add_up": 108
+  }
+ },
+ "notes": [
+  "places.json did not exist: created with 17 states and 176 districts."
+ ],
+ "warnings": [
+  "lecturers_uni: 108 totals do not add up (district rows vs state row, or state rows vs national row), e.g. states_vs_national 2014-01-01|All Universities|all|both: total 31917, parts 22103 ; states_vs_national 2014-01-01|All Universities|all|female: total 16872, parts 12135"
+ ]
+}

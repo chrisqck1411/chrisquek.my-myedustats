@@ -1,0 +1,101 @@
+# Weekly refresh of the education data from data.gov.my (open data, CC BY 4.0).
+#
+# What it does: fetches the data, runs the checks in scripts/refresh-data.mjs, and only if the numbers
+# changed commits them to the staging branch and opens (or updates) a pull request staging -> main.
+# Chris taps merge. If a check fails, nothing is committed and the run shows as failed.
+#
+# It runs from the "staging" branch. The pull request contains everything that is on staging.
+# What the data files mean: data/README.md.
+name: Refresh data
+
+on:
+  schedule:
+    - cron: '23 3 * * 1' # Mondays 03:23 UTC = 11:23 Malaysia time
+  workflow_dispatch:
+    inputs:
+      update_places:
+        description: 'Accept new or renamed place names (only after reviewing them)'
+        type: boolean
+        default: false
+  push:
+    # Test run whenever the refresh code itself changes on staging (no pull request is opened for these).
+    branches: [staging]
+    paths:
+      - '.github/workflows/refresh-data.yml'
+      - 'scripts/refresh-data.mjs'
+      - 'scripts/lib/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out the staging branch
+        uses: actions/checkout@v5
+        with:
+          ref: staging
+          fetch-depth: 0
+
+      - name: Set up git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Bring staging up to date with main
+        run: git merge origin/main --no-edit
+
+      - name: Run the tests
+        run: npm test --if-present
+        # The tests need no packages installed: they use Node's built-in test runner.
+
+      - name: Fetch and check the data
+        run: |
+          node scripts/refresh-data.mjs --summary "$RUNNER_TEMP/summary.md" ${{ inputs.update_places && '--update-places' || '' }}
+
+      - name: Show the summary
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/summary.md" ]; then cat "$RUNNER_TEMP/summary.md" >> "$GITHUB_STEP_SUMMARY"; fi
+
+      - name: Commit changed data to staging
+        id: commit
+        run: |
+          git add data
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No data changes to commit."
+          else
+            { echo "Update education data from data.gov.my"; echo; cat "$RUNNER_TEMP/summary.md"; } > "$RUNNER_TEMP/commit-message.txt"
+            git commit -F "$RUNNER_TEMP/commit-message.txt"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/staging)" ]; then
+            git pull --rebase origin staging
+            git push origin HEAD:staging
+          fi
+
+      - name: Open or update the pull request to main
+        if: steps.commit.outputs.changed == 'true' && github.event_name != 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            cat "$RUNNER_TEMP/summary.md"
+            echo
+            echo "This pull request contains everything that is currently on the staging branch."
+            echo "Check the staging site first, then merge."
+          } > "$RUNNER_TEMP/pr-body.md"
+          existing="$(gh pr list --base main --head staging --state open --json number --jq '.[0].number')"
+          if [ -z "$existing" ]; then
+            gh pr create --base main --head staging --title "Update education data" --body-file "$RUNNER_TEMP/pr-body.md"
+          else
+            gh pr edit "$existing" --body-file "$RUNNER_TEMP/pr-body.md"
+          fi

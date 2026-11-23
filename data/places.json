@@ -1,0 +1,2105 @@
+{
+ "states": {
+  "johor": {
+   "name": "Johor"
+  },
+  "kedah": {
+   "name": "Kedah"
+  },
+  "kelantan": {
+   "name": "Kelantan"
+  },
+  "kuala-lumpur": {
+   "name": "W.P. Kuala Lumpur"
+  },
+  "labuan": {
+   "name": "W.P. Labuan"
+  },
+  "malaysia": {
+   "name": "Malaysia"
+  },
+  "melaka": {
+   "name": "Melaka"
+  },
+  "negeri-sembilan": {
+   "name": "Negeri Sembilan"
+  },
+  "pahang": {
+   "name": "Pahang"
+  },
+  "perak": {
+   "name": "Perak"
+  },
+  "perlis": {
+   "name": "Perlis"
+  },
+  "pulau-pinang": {
+   "name": "Pulau Pinang"
+  },
+  "putrajaya": {
+   "name": "W.P. Putrajaya"
+  },
+  "sabah": {
+   "name": "Sabah"
+  },
+  "sarawak": {
+   "name": "Sarawak"
+  },
+  "selangor": {
+   "name": "Selangor"
+  },
+  "terengganu": {
+   "name": "Terengganu"
+  }
+ },
+ "districts": {
+  "johor/batu-pahat": {
+   "state": "johor",
+   "name": "Batu Pahat",
+   "names": {
+    "schools_district": "Batu Pahat",
+    "enrolment_school_district": "Batu Pahat",
+    "teachers_district": "Batu Pahat",
+    "completion_school_district": "Batu Pahat"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "johor/johor-bahru": {
+   "state": "johor",
+   "name": "Johor Bahru",
+   "names": {
+    "schools_district": "Johor Bahru",
+    "enrolment_school_district": "Johor Bahru",
+    "teachers_district": "Johor Bahru",
+    "completion_school_district": "Johor Bahru"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "johor/kluang": {
+   "state": "johor",
+   "name": "Kluang",
+   "names": {
+    "schools_district": "Kluang",
+    "enrolment_school_district": "Kluang",
+    "teachers_district": "Kluang",
+    "completion_school_district": "Kluang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "johor/kota-tinggi": {
+   "state": "johor",
+   "name": "Kota Tinggi",
+   "names": {
+    "schools_district": "Kota Tinggi",
+    "enrolment_school_district": "Kota Tinggi",
+    "teachers_district": "Kota Tinggi",
+    "completion_school_district": "Kota Tinggi"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "johor/kulai": {
+   "state": "johor",
+   "name": "Kulai",
+   "names": {
+    "schools_district": "Kulai",
+    "enrolment_school_district": "Kulai",
+    "teachers_district": "Kulai",
+    "completion_school_district": "Kulai"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "johor/mersing": {
+   "state": "johor",
+   "name": "Mersing",
+   "names": {
+    "schools_district": "Mersing",
+    "enrolment_school_district": "Mersing",
+    "teachers_district": "Mersing",
+    "completion_school_district": "Mersing"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "johor/muar": {
+   "state": "johor",
+   "name": "Muar",
+   "names": {
+    "schools_district": "Muar",
+    "enrolment_school_district": "Muar",
+    "teachers_district": "Muar",
+    "completion_school_district": "Muar"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "johor/pasir-gudang": {
+   "state": "johor",
+   "name": "Pasir Gudang",
+   "names": {
+    "enrolment_school_district": "Pasir Gudang",
+    "teachers_district": "Pasir Gudang",
+    "completion_school_district": "Pasir Gudang"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "johor/pontian": {
+   "state": "johor",
+   "name": "Pontian",
+   "names": {
+    "schools_district": "Pontian",
+    "enrolment_school_district": "Pontian",
+    "teachers_district": "Pontian",
+    "completion_school_district": "Pontian"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "johor/segamat": {
+   "state": "johor",
+   "name": "Segamat",
+   "names": {
+    "schools_district": "Segamat",
+    "enrolment_school_district": "Segamat",
+    "teachers_district": "Segamat",
+    "completion_school_district": "Segamat"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "johor/tangkak": {
+   "state": "johor",
+   "name": "Tangkak",
+   "names": {
+    "schools_district": "Tangkak",
+    "enrolment_school_district": "Tangkak",
+    "teachers_district": "Tangkak",
+    "completion_school_district": "Tangkak"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/baling": {
+   "state": "kedah",
+   "name": "Baling",
+   "names": {
+    "schools_district": "Baling",
+    "enrolment_school_district": "Baling",
+    "teachers_district": "Baling",
+    "completion_school_district": "Baling"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/bandar-baharu": {
+   "state": "kedah",
+   "name": "Bandar Baharu",
+   "names": {
+    "schools_district": "Bandar Baharu",
+    "enrolment_school_district": "Bandar Baharu",
+    "teachers_district": "Bandar Baharu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/kota-setar": {
+   "state": "kedah",
+   "name": "Kota Setar",
+   "names": {
+    "schools_district": "Kota Setar",
+    "enrolment_school_district": "Kota Setar",
+    "teachers_district": "Kota Setar",
+    "completion_school_district": "Kota Setar"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/kuala-muda": {
+   "state": "kedah",
+   "name": "Kuala Muda",
+   "names": {
+    "schools_district": "Kuala Muda",
+    "enrolment_school_district": "Kuala Muda",
+    "teachers_district": "Kuala Muda"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/kuala-muda-yan": {
+   "state": "kedah",
+   "name": "Kuala Muda/Yan",
+   "names": {
+    "enrolment_school_district": "Kuala Muda/Yan",
+    "teachers_district": "Kuala Muda/Yan",
+    "completion_school_district": "Kuala Muda/Yan"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "kedah/kubang-pasu": {
+   "state": "kedah",
+   "name": "Kubang Pasu",
+   "names": {
+    "schools_district": "Kubang Pasu",
+    "enrolment_school_district": "Kubang Pasu",
+    "teachers_district": "Kubang Pasu",
+    "completion_school_district": "Kubang Pasu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/kulim": {
+   "state": "kedah",
+   "name": "Kulim",
+   "names": {
+    "schools_district": "Kulim",
+    "enrolment_school_district": "Kulim",
+    "teachers_district": "Kulim"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/kulim-bandar-baharu": {
+   "state": "kedah",
+   "name": "Kulim/Bandar Baharu",
+   "names": {
+    "enrolment_school_district": "Kulim/Bandar Baharu",
+    "teachers_district": "Kulim/Bandar Baharu",
+    "completion_school_district": "Kulim/Bandar Baharu"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "kedah/langkawi": {
+   "state": "kedah",
+   "name": "Langkawi",
+   "names": {
+    "schools_district": "Langkawi",
+    "enrolment_school_district": "Langkawi",
+    "teachers_district": "Langkawi",
+    "completion_school_district": "Langkawi"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/padang-terap": {
+   "state": "kedah",
+   "name": "Padang Terap",
+   "names": {
+    "schools_district": "Padang Terap",
+    "enrolment_school_district": "Padang Terap",
+    "teachers_district": "Padang Terap",
+    "completion_school_district": "Padang Terap"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/pendang": {
+   "state": "kedah",
+   "name": "Pendang",
+   "names": {
+    "schools_district": "Pendang",
+    "enrolment_school_district": "Pendang",
+    "teachers_district": "Pendang",
+    "completion_school_district": "Pendang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/pokok-sena": {
+   "state": "kedah",
+   "name": "Pokok Sena",
+   "names": {
+    "schools_district": "Pokok Sena",
+    "enrolment_school_district": "Pokok Sena",
+    "teachers_district": "Pokok Sena"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/sik": {
+   "state": "kedah",
+   "name": "Sik",
+   "names": {
+    "schools_district": "Sik",
+    "enrolment_school_district": "Sik",
+    "teachers_district": "Sik",
+    "completion_school_district": "Sik"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kedah/yan": {
+   "state": "kedah",
+   "name": "Yan",
+   "names": {
+    "schools_district": "Yan",
+    "enrolment_school_district": "Yan",
+    "teachers_district": "Yan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/bachok": {
+   "state": "kelantan",
+   "name": "Bachok",
+   "names": {
+    "schools_district": "Bachok",
+    "enrolment_school_district": "Bachok",
+    "teachers_district": "Bachok",
+    "completion_school_district": "Bachok"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/gua-musang": {
+   "state": "kelantan",
+   "name": "Gua Musang",
+   "names": {
+    "schools_district": "Gua Musang",
+    "enrolment_school_district": "Gua Musang",
+    "teachers_district": "Gua Musang",
+    "completion_school_district": "Gua Musang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/jeli": {
+   "state": "kelantan",
+   "name": "Jeli",
+   "names": {
+    "schools_district": "Jeli",
+    "enrolment_school_district": "Jeli",
+    "teachers_district": "Jeli",
+    "completion_school_district": "Jeli"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/kecil-lojing": {
+   "state": "kelantan",
+   "name": "Kecil Lojing",
+   "names": {
+    "schools_district": "Kecil Lojing",
+    "enrolment_school_district": "Kecil Lojing",
+    "teachers_district": "Kecil Lojing"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/kota-bharu": {
+   "state": "kelantan",
+   "name": "Kota Bharu",
+   "names": {
+    "schools_district": "Kota Bharu",
+    "enrolment_school_district": "Kota Bharu",
+    "teachers_district": "Kota Bharu",
+    "completion_school_district": "Kota Bharu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/kuala-krai": {
+   "state": "kelantan",
+   "name": "Kuala Krai",
+   "names": {
+    "schools_district": "Kuala Krai",
+    "enrolment_school_district": "Kuala Krai",
+    "teachers_district": "Kuala Krai",
+    "completion_school_district": "Kuala Krai"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/machang": {
+   "state": "kelantan",
+   "name": "Machang",
+   "names": {
+    "schools_district": "Machang",
+    "enrolment_school_district": "Machang",
+    "teachers_district": "Machang",
+    "completion_school_district": "Machang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/pasir-mas": {
+   "state": "kelantan",
+   "name": "Pasir Mas",
+   "names": {
+    "schools_district": "Pasir Mas",
+    "enrolment_school_district": "Pasir Mas",
+    "teachers_district": "Pasir Mas",
+    "completion_school_district": "Pasir Mas"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/pasir-puteh": {
+   "state": "kelantan",
+   "name": "Pasir Puteh",
+   "names": {
+    "schools_district": "Pasir Puteh",
+    "enrolment_school_district": "Pasir Puteh",
+    "teachers_district": "Pasir Puteh",
+    "completion_school_district": "Pasir Puteh"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/pasir-putih": {
+   "state": "kelantan",
+   "name": "Pasir Putih",
+   "names": {
+    "enrolment_school_district": "Pasir Putih",
+    "teachers_district": "Pasir Putih"
+   },
+   "first_date": "2023-06-30",
+   "geo_id": null
+  },
+  "kelantan/tanah-merah": {
+   "state": "kelantan",
+   "name": "Tanah Merah",
+   "names": {
+    "schools_district": "Tanah Merah",
+    "enrolment_school_district": "Tanah Merah",
+    "teachers_district": "Tanah Merah",
+    "completion_school_district": "Tanah Merah"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kelantan/tumpat": {
+   "state": "kelantan",
+   "name": "Tumpat",
+   "names": {
+    "schools_district": "Tumpat",
+    "enrolment_school_district": "Tumpat",
+    "teachers_district": "Tumpat",
+    "completion_school_district": "Tumpat"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "kuala-lumpur/bangsar-pudu": {
+   "state": "kuala-lumpur",
+   "name": "Bangsar Pudu",
+   "names": {
+    "teachers_district": "Bangsar Pudu",
+    "completion_school_district": "Bangsar/Pudu"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "kuala-lumpur/keramat": {
+   "state": "kuala-lumpur",
+   "name": "Keramat",
+   "names": {
+    "teachers_district": "Keramat",
+    "completion_school_district": "Keramat"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "kuala-lumpur/sentul": {
+   "state": "kuala-lumpur",
+   "name": "Sentul",
+   "names": {
+    "teachers_district": "Sentul",
+    "completion_school_district": "Sentul"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "kuala-lumpur/w-p-kuala-lumpur": {
+   "state": "kuala-lumpur",
+   "name": "W.P. Kuala Lumpur",
+   "names": {
+    "schools_district": "W.P. Kuala Lumpur",
+    "enrolment_school_district": "W.P. Kuala Lumpur",
+    "teachers_district": "W.P. Kuala Lumpur"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "labuan/jpwp-labuan": {
+   "state": "labuan",
+   "name": "Jpwp Labuan",
+   "names": {
+    "teachers_district": "Jpwp Labuan"
+   },
+   "first_date": "2023-06-30",
+   "geo_id": null
+  },
+  "labuan/w-p-labuan": {
+   "state": "labuan",
+   "name": "W.P. Labuan",
+   "names": {
+    "schools_district": "W.P. Labuan",
+    "enrolment_school_district": "W.P. Labuan",
+    "teachers_district": "W.P. Labuan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "melaka/alor-gajah": {
+   "state": "melaka",
+   "name": "Alor Gajah",
+   "names": {
+    "schools_district": "Alor Gajah",
+    "enrolment_school_district": "Alor Gajah",
+    "teachers_district": "Alor Gajah",
+    "completion_school_district": "Alor Gajah"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "melaka/jasin": {
+   "state": "melaka",
+   "name": "Jasin",
+   "names": {
+    "schools_district": "Jasin",
+    "enrolment_school_district": "Jasin",
+    "teachers_district": "Jasin",
+    "completion_school_district": "Jasin"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "melaka/melaka-tengah": {
+   "state": "melaka",
+   "name": "Melaka Tengah",
+   "names": {
+    "schools_district": "Melaka Tengah",
+    "enrolment_school_district": "Melaka Tengah",
+    "teachers_district": "Melaka Tengah",
+    "completion_school_district": "Melaka Tengah"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "negeri-sembilan/jelebu": {
+   "state": "negeri-sembilan",
+   "name": "Jelebu",
+   "names": {
+    "schools_district": "Jelebu",
+    "enrolment_school_district": "Jelebu",
+    "teachers_district": "Jelebu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "negeri-sembilan/jempol": {
+   "state": "negeri-sembilan",
+   "name": "Jempol",
+   "names": {
+    "schools_district": "Jempol",
+    "enrolment_school_district": "Jempol",
+    "teachers_district": "Jempol"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "negeri-sembilan/jempol-jelebu": {
+   "state": "negeri-sembilan",
+   "name": "Jempol/Jelebu",
+   "names": {
+    "enrolment_school_district": "Jempol/Jelebu",
+    "teachers_district": "Jempol/Jelebu",
+    "completion_school_district": "Jempol/Jelebu"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "negeri-sembilan/kuala-pilah": {
+   "state": "negeri-sembilan",
+   "name": "Kuala Pilah",
+   "names": {
+    "schools_district": "Kuala Pilah",
+    "enrolment_school_district": "Kuala Pilah",
+    "teachers_district": "Kuala Pilah",
+    "completion_school_district": "Kuala Pilah"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "negeri-sembilan/port-dickson": {
+   "state": "negeri-sembilan",
+   "name": "Port Dickson",
+   "names": {
+    "schools_district": "Port Dickson",
+    "enrolment_school_district": "Port Dickson",
+    "teachers_district": "Port Dickson",
+    "completion_school_district": "Port Dickson"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "negeri-sembilan/rembau": {
+   "state": "negeri-sembilan",
+   "name": "Rembau",
+   "names": {
+    "schools_district": "Rembau",
+    "enrolment_school_district": "Rembau",
+    "teachers_district": "Rembau",
+    "completion_school_district": "Rembau"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "negeri-sembilan/seremban": {
+   "state": "negeri-sembilan",
+   "name": "Seremban",
+   "names": {
+    "schools_district": "Seremban",
+    "enrolment_school_district": "Seremban",
+    "teachers_district": "Seremban",
+    "completion_school_district": "Seremban"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "negeri-sembilan/tampin": {
+   "state": "negeri-sembilan",
+   "name": "Tampin",
+   "names": {
+    "schools_district": "Tampin",
+    "enrolment_school_district": "Tampin",
+    "teachers_district": "Tampin",
+    "completion_school_district": "Tampin"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/bentong": {
+   "state": "pahang",
+   "name": "Bentong",
+   "names": {
+    "schools_district": "Bentong",
+    "enrolment_school_district": "Bentong",
+    "teachers_district": "Bentong",
+    "completion_school_district": "Bentong"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/bera": {
+   "state": "pahang",
+   "name": "Bera",
+   "names": {
+    "schools_district": "Bera",
+    "enrolment_school_district": "Bera",
+    "teachers_district": "Bera",
+    "completion_school_district": "Bera"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/cameron-highlands": {
+   "state": "pahang",
+   "name": "Cameron Highlands",
+   "names": {
+    "schools_district": "Cameron Highlands",
+    "enrolment_school_district": "Cameron Highlands",
+    "teachers_district": "Cameron Highlands",
+    "completion_school_district": "Cameron Highlands"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/jerantut": {
+   "state": "pahang",
+   "name": "Jerantut",
+   "names": {
+    "schools_district": "Jerantut",
+    "enrolment_school_district": "Jerantut",
+    "teachers_district": "Jerantut",
+    "completion_school_district": "Jerantut"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/kuala-lipis": {
+   "state": "pahang",
+   "name": "Kuala Lipis",
+   "names": {
+    "schools_district": "Kuala Lipis",
+    "enrolment_school_district": "Kuala Lipis",
+    "teachers_district": "Kuala Lipis"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/kuantan": {
+   "state": "pahang",
+   "name": "Kuantan",
+   "names": {
+    "schools_district": "Kuantan",
+    "enrolment_school_district": "Kuantan",
+    "teachers_district": "Kuantan",
+    "completion_school_district": "Kuantan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/lipis": {
+   "state": "pahang",
+   "name": "Lipis",
+   "names": {
+    "schools_district": "Lipis",
+    "enrolment_school_district": "Lipis",
+    "teachers_district": "Lipis",
+    "completion_school_district": "Lipis"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/maran": {
+   "state": "pahang",
+   "name": "Maran",
+   "names": {
+    "schools_district": "Maran",
+    "enrolment_school_district": "Maran",
+    "teachers_district": "Maran",
+    "completion_school_district": "Maran"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/pekan": {
+   "state": "pahang",
+   "name": "Pekan",
+   "names": {
+    "schools_district": "Pekan",
+    "enrolment_school_district": "Pekan",
+    "teachers_district": "Pekan",
+    "completion_school_district": "Pekan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/raub": {
+   "state": "pahang",
+   "name": "Raub",
+   "names": {
+    "schools_district": "Raub",
+    "enrolment_school_district": "Raub",
+    "teachers_district": "Raub",
+    "completion_school_district": "Raub"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/rompin": {
+   "state": "pahang",
+   "name": "Rompin",
+   "names": {
+    "schools_district": "Rompin",
+    "enrolment_school_district": "Rompin",
+    "teachers_district": "Rompin",
+    "completion_school_district": "Rompin"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pahang/temerloh": {
+   "state": "pahang",
+   "name": "Temerloh",
+   "names": {
+    "schools_district": "Temerloh",
+    "enrolment_school_district": "Temerloh",
+    "teachers_district": "Temerloh",
+    "completion_school_district": "Temerloh"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/bagan-datuk": {
+   "state": "perak",
+   "name": "Bagan Datuk",
+   "names": {
+    "schools_district": "Bagan Datuk",
+    "enrolment_school_district": "Bagan Datuk",
+    "teachers_district": "Bagan Datuk",
+    "completion_school_district": "Bagan Datuk"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/batang-padang": {
+   "state": "perak",
+   "name": "Batang Padang",
+   "names": {
+    "schools_district": "Batang Padang",
+    "enrolment_school_district": "Batang Padang",
+    "teachers_district": "Batang Padang",
+    "completion_school_district": "Batang Padang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/hilir-perak": {
+   "state": "perak",
+   "name": "Hilir Perak",
+   "names": {
+    "schools_district": "Hilir Perak",
+    "enrolment_school_district": "Hilir Perak",
+    "teachers_district": "Hilir Perak",
+    "completion_school_district": "Hilir Perak"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/hulu-perak": {
+   "state": "perak",
+   "name": "Hulu Perak",
+   "names": {
+    "schools_district": "Hulu Perak",
+    "enrolment_school_district": "Hulu Perak",
+    "teachers_district": "Hulu Perak",
+    "completion_school_district": "Hulu Perak"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/kampar": {
+   "state": "perak",
+   "name": "Kampar",
+   "names": {
+    "schools_district": "Kampar",
+    "enrolment_school_district": "Kampar",
+    "teachers_district": "Kampar"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/kerian": {
+   "state": "perak",
+   "name": "Kerian",
+   "names": {
+    "schools_district": "Kerian",
+    "enrolment_school_district": "Kerian",
+    "teachers_district": "Kerian",
+    "completion_school_district": "Kerian"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/kinta": {
+   "state": "perak",
+   "name": "Kinta",
+   "names": {
+    "schools_district": "Kinta",
+    "enrolment_school_district": "Kinta",
+    "teachers_district": "Kinta",
+    "completion_school_district": "Kinta"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/kinta-selatan": {
+   "state": "perak",
+   "name": "Kinta Selatan",
+   "names": {
+    "enrolment_school_district": "Kinta Selatan",
+    "teachers_district": "Kinta Selatan",
+    "completion_school_district": "Kinta Selatan"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "perak/kinta-utara": {
+   "state": "perak",
+   "name": "Kinta Utara",
+   "names": {
+    "enrolment_school_district": "Kinta Utara",
+    "teachers_district": "Kinta Utara"
+   },
+   "first_date": "2023-06-30",
+   "geo_id": null
+  },
+  "perak/kuala-kangsar": {
+   "state": "perak",
+   "name": "Kuala Kangsar",
+   "names": {
+    "schools_district": "Kuala Kangsar",
+    "enrolment_school_district": "Kuala Kangsar",
+    "teachers_district": "Kuala Kangsar",
+    "completion_school_district": "Kuala Kangsar"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/larut-dan-matang": {
+   "state": "perak",
+   "name": "Larut dan Matang",
+   "names": {
+    "schools_district": "Larut dan Matang",
+    "enrolment_school_district": "Larut dan Matang",
+    "teachers_district": "Larut dan Matang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/larut-matang-and-selama": {
+   "state": "perak",
+   "name": "Larut Matang & Selama",
+   "names": {
+    "schools_district": "Larut Matang & Selama",
+    "enrolment_school_district": "Larut Matang & Selama",
+    "teachers_district": "Larut Matang & Selama"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/larut-matang-selama": {
+   "state": "perak",
+   "name": "Larut/Matang/Selama",
+   "names": {
+    "enrolment_school_district": "Larut/Matang/Selama",
+    "teachers_district": "Larut/Matang/Selama",
+    "completion_school_district": "Larut/Matang/Selama"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "perak/manjung": {
+   "state": "perak",
+   "name": "Manjung",
+   "names": {
+    "enrolment_school_district": "Manjung",
+    "teachers_district": "Manjung",
+    "completion_school_district": "Manjung"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "perak/manjung-dinding": {
+   "state": "perak",
+   "name": "Manjung (Dinding)",
+   "names": {
+    "schools_district": "Manjung (Dinding)",
+    "enrolment_school_district": "Manjung (Dinding)",
+    "teachers_district": "Manjung (Dinding)"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/muallim": {
+   "state": "perak",
+   "name": "Muallim",
+   "names": {
+    "schools_district": "Muallim",
+    "enrolment_school_district": "Muallim",
+    "teachers_district": "Muallim"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perak/perak-tengah": {
+   "state": "perak",
+   "name": "Perak Tengah",
+   "names": {
+    "schools_district": "Perak Tengah",
+    "enrolment_school_district": "Perak Tengah",
+    "teachers_district": "Perak Tengah",
+    "completion_school_district": "Perak Tengah"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "perlis/jpn-perlis": {
+   "state": "perlis",
+   "name": "Jpn Perlis",
+   "names": {
+    "enrolment_school_district": "Jpn Perlis"
+   },
+   "first_date": "2023-06-30",
+   "geo_id": null
+  },
+  "perlis/perlis": {
+   "state": "perlis",
+   "name": "Perlis",
+   "names": {
+    "schools_district": "Perlis",
+    "enrolment_school_district": "Perlis",
+    "teachers_district": "Perlis"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pulau-pinang/barat-daya": {
+   "state": "pulau-pinang",
+   "name": "Barat Daya",
+   "names": {
+    "schools_district": "Barat Daya",
+    "enrolment_school_district": "Barat Daya",
+    "teachers_district": "Barat Daya",
+    "completion_school_district": "Barat Daya"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pulau-pinang/seberang-perai-selatan": {
+   "state": "pulau-pinang",
+   "name": "Seberang Perai Selatan",
+   "names": {
+    "schools_district": "Seberang Perai Selatan",
+    "enrolment_school_district": "Seberang Perai Selatan",
+    "teachers_district": "Seberang Perai Selatan",
+    "completion_school_district": "Seberang Perai Selatan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pulau-pinang/seberang-perai-tengah": {
+   "state": "pulau-pinang",
+   "name": "Seberang Perai Tengah",
+   "names": {
+    "schools_district": "Seberang Perai Tengah",
+    "enrolment_school_district": "Seberang Perai Tengah",
+    "teachers_district": "Seberang Perai Tengah",
+    "completion_school_district": "Seberang Perai Tengah"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pulau-pinang/seberang-perai-utara": {
+   "state": "pulau-pinang",
+   "name": "Seberang Perai Utara",
+   "names": {
+    "schools_district": "Seberang Perai Utara",
+    "enrolment_school_district": "Seberang Perai Utara",
+    "teachers_district": "Seberang Perai Utara",
+    "completion_school_district": "Seberang Perai Utara"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "pulau-pinang/timur-laut": {
+   "state": "pulau-pinang",
+   "name": "Timur Laut",
+   "names": {
+    "schools_district": "Timur Laut",
+    "enrolment_school_district": "Timur Laut",
+    "teachers_district": "Timur Laut",
+    "completion_school_district": "Timur Laut"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "putrajaya/jpwp-putrajaya": {
+   "state": "putrajaya",
+   "name": "Jpwp Putrajaya",
+   "names": {
+    "teachers_district": "Jpwp Putrajaya"
+   },
+   "first_date": "2023-06-30",
+   "geo_id": null
+  },
+  "putrajaya/w-p-putrajaya": {
+   "state": "putrajaya",
+   "name": "W.P. Putrajaya",
+   "names": {
+    "schools_district": "W.P. Putrajaya",
+    "enrolment_school_district": "W.P. Putrajaya",
+    "teachers_district": "W.P. Putrajaya"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/beaufort": {
+   "state": "sabah",
+   "name": "Beaufort",
+   "names": {
+    "schools_district": "Beaufort",
+    "enrolment_school_district": "Beaufort",
+    "teachers_district": "Beaufort",
+    "completion_school_district": "Beaufort"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/beluran": {
+   "state": "sabah",
+   "name": "Beluran",
+   "names": {
+    "schools_district": "Beluran",
+    "enrolment_school_district": "Beluran",
+    "teachers_district": "Beluran",
+    "completion_school_district": "Beluran"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/keningau": {
+   "state": "sabah",
+   "name": "Keningau",
+   "names": {
+    "schools_district": "Keningau",
+    "enrolment_school_district": "Keningau",
+    "teachers_district": "Keningau",
+    "completion_school_district": "Keningau"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/kinabatangan": {
+   "state": "sabah",
+   "name": "Kinabatangan",
+   "names": {
+    "schools_district": "Kinabatangan",
+    "enrolment_school_district": "Kinabatangan",
+    "teachers_district": "Kinabatangan",
+    "completion_school_district": "Kinabatangan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/kota-belud": {
+   "state": "sabah",
+   "name": "Kota Belud",
+   "names": {
+    "schools_district": "Kota Belud",
+    "enrolment_school_district": "Kota Belud",
+    "teachers_district": "Kota Belud",
+    "completion_school_district": "Kota Belud"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/kota-kinabalu": {
+   "state": "sabah",
+   "name": "Kota Kinabalu",
+   "names": {
+    "schools_district": "Kota Kinabalu",
+    "enrolment_school_district": "Kota Kinabalu",
+    "teachers_district": "Kota Kinabalu",
+    "completion_school_district": "Kota Kinabalu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/kota-marudu": {
+   "state": "sabah",
+   "name": "Kota Marudu",
+   "names": {
+    "schools_district": "Kota Marudu",
+    "enrolment_school_district": "Kota Marudu",
+    "teachers_district": "Kota Marudu",
+    "completion_school_district": "Kota Marudu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/kuala-penyu": {
+   "state": "sabah",
+   "name": "Kuala Penyu",
+   "names": {
+    "schools_district": "Kuala Penyu",
+    "enrolment_school_district": "Kuala Penyu",
+    "teachers_district": "Kuala Penyu",
+    "completion_school_district": "Kuala Penyu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/kudat": {
+   "state": "sabah",
+   "name": "Kudat",
+   "names": {
+    "schools_district": "Kudat",
+    "enrolment_school_district": "Kudat",
+    "teachers_district": "Kudat",
+    "completion_school_district": "Kudat"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/kunak": {
+   "state": "sabah",
+   "name": "Kunak",
+   "names": {
+    "schools_district": "Kunak",
+    "enrolment_school_district": "Kunak",
+    "teachers_district": "Kunak",
+    "completion_school_district": "Kunak"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/lahad-datu": {
+   "state": "sabah",
+   "name": "Lahad Datu",
+   "names": {
+    "schools_district": "Lahad Datu",
+    "enrolment_school_district": "Lahad Datu",
+    "teachers_district": "Lahad Datu",
+    "completion_school_district": "Lahad Datu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/nabawan": {
+   "state": "sabah",
+   "name": "Nabawan",
+   "names": {
+    "schools_district": "Nabawan",
+    "enrolment_school_district": "Nabawan",
+    "teachers_district": "Nabawan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/papar": {
+   "state": "sabah",
+   "name": "Papar",
+   "names": {
+    "schools_district": "Papar",
+    "enrolment_school_district": "Papar",
+    "teachers_district": "Papar",
+    "completion_school_district": "Papar"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/penampang": {
+   "state": "sabah",
+   "name": "Penampang",
+   "names": {
+    "schools_district": "Penampang",
+    "enrolment_school_district": "Penampang",
+    "teachers_district": "Penampang",
+    "completion_school_district": "Penampang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/pensiangan": {
+   "state": "sabah",
+   "name": "Pensiangan",
+   "names": {
+    "enrolment_school_district": "Pensiangan",
+    "teachers_district": "Pensiangan",
+    "completion_school_district": "Pensiangan"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "sabah/pitas": {
+   "state": "sabah",
+   "name": "Pitas",
+   "names": {
+    "schools_district": "Pitas",
+    "enrolment_school_district": "Pitas",
+    "teachers_district": "Pitas",
+    "completion_school_district": "Pitas"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/putatan": {
+   "state": "sabah",
+   "name": "Putatan",
+   "names": {
+    "schools_district": "Putatan",
+    "enrolment_school_district": "Putatan",
+    "teachers_district": "Putatan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/ranau": {
+   "state": "sabah",
+   "name": "Ranau",
+   "names": {
+    "schools_district": "Ranau",
+    "enrolment_school_district": "Ranau",
+    "teachers_district": "Ranau",
+    "completion_school_district": "Ranau"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/sandakan": {
+   "state": "sabah",
+   "name": "Sandakan",
+   "names": {
+    "schools_district": "Sandakan",
+    "enrolment_school_district": "Sandakan",
+    "teachers_district": "Sandakan",
+    "completion_school_district": "Sandakan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/semporna": {
+   "state": "sabah",
+   "name": "Semporna",
+   "names": {
+    "schools_district": "Semporna",
+    "enrolment_school_district": "Semporna",
+    "teachers_district": "Semporna",
+    "completion_school_district": "Semporna"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/sipitang": {
+   "state": "sabah",
+   "name": "Sipitang",
+   "names": {
+    "schools_district": "Sipitang",
+    "enrolment_school_district": "Sipitang",
+    "teachers_district": "Sipitang",
+    "completion_school_district": "Sipitang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/tambunan": {
+   "state": "sabah",
+   "name": "Tambunan",
+   "names": {
+    "schools_district": "Tambunan",
+    "enrolment_school_district": "Tambunan",
+    "teachers_district": "Tambunan",
+    "completion_school_district": "Tambunan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/tawau": {
+   "state": "sabah",
+   "name": "Tawau",
+   "names": {
+    "schools_district": "Tawau",
+    "enrolment_school_district": "Tawau",
+    "teachers_district": "Tawau",
+    "completion_school_district": "Tawau"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/telupid": {
+   "state": "sabah",
+   "name": "Telupid",
+   "names": {
+    "schools_district": "Telupid",
+    "enrolment_school_district": "Telupid",
+    "teachers_district": "Telupid"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/telupid-tongod": {
+   "state": "sabah",
+   "name": "Telupid/Tongod",
+   "names": {
+    "enrolment_school_district": "Telupid/Tongod",
+    "teachers_district": "Telupid/Tongod",
+    "completion_school_district": "Telupid/Tongod"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "sabah/tenom": {
+   "state": "sabah",
+   "name": "Tenom",
+   "names": {
+    "schools_district": "Tenom",
+    "enrolment_school_district": "Tenom",
+    "teachers_district": "Tenom",
+    "completion_school_district": "Tenom"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/tongod": {
+   "state": "sabah",
+   "name": "Tongod",
+   "names": {
+    "schools_district": "Tongod",
+    "enrolment_school_district": "Tongod",
+    "teachers_district": "Tongod"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sabah/tuaran": {
+   "state": "sabah",
+   "name": "Tuaran",
+   "names": {
+    "schools_district": "Tuaran",
+    "enrolment_school_district": "Tuaran",
+    "teachers_district": "Tuaran",
+    "completion_school_district": "Tuaran"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/asajaya": {
+   "state": "sarawak",
+   "name": "Asajaya",
+   "names": {
+    "schools_district": "Asajaya",
+    "enrolment_school_district": "Asajaya",
+    "teachers_district": "Asajaya"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/baram": {
+   "state": "sarawak",
+   "name": "Baram",
+   "names": {
+    "enrolment_school_district": "Baram",
+    "teachers_district": "Baram",
+    "completion_school_district": "Baram"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "sarawak/bau": {
+   "state": "sarawak",
+   "name": "Bau",
+   "names": {
+    "schools_district": "Bau",
+    "enrolment_school_district": "Bau",
+    "teachers_district": "Bau",
+    "completion_school_district": "Bau"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/belaga": {
+   "state": "sarawak",
+   "name": "Belaga",
+   "names": {
+    "schools_district": "Belaga",
+    "enrolment_school_district": "Belaga",
+    "teachers_district": "Belaga",
+    "completion_school_district": "Belaga"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/betong": {
+   "state": "sarawak",
+   "name": "Betong",
+   "names": {
+    "schools_district": "Betong",
+    "enrolment_school_district": "Betong",
+    "teachers_district": "Betong",
+    "completion_school_district": "Betong"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/bintulu": {
+   "state": "sarawak",
+   "name": "Bintulu",
+   "names": {
+    "schools_district": "Bintulu",
+    "enrolment_school_district": "Bintulu",
+    "teachers_district": "Bintulu",
+    "completion_school_district": "Bintulu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/dalat": {
+   "state": "sarawak",
+   "name": "Dalat",
+   "names": {
+    "schools_district": "Dalat",
+    "enrolment_school_district": "Dalat",
+    "teachers_district": "Dalat",
+    "completion_school_district": "Dalat"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/daro": {
+   "state": "sarawak",
+   "name": "Daro",
+   "names": {
+    "schools_district": "Daro",
+    "enrolment_school_district": "Daro",
+    "teachers_district": "Daro",
+    "completion_school_district": "Daro"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/julau": {
+   "state": "sarawak",
+   "name": "Julau",
+   "names": {
+    "schools_district": "Julau",
+    "enrolment_school_district": "Julau",
+    "teachers_district": "Julau",
+    "completion_school_district": "Julau"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/kabong": {
+   "state": "sarawak",
+   "name": "Kabong",
+   "names": {
+    "schools_district": "Kabong",
+    "enrolment_school_district": "Kabong",
+    "teachers_district": "Kabong"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/kanowit": {
+   "state": "sarawak",
+   "name": "Kanowit",
+   "names": {
+    "schools_district": "Kanowit",
+    "enrolment_school_district": "Kanowit",
+    "teachers_district": "Kanowit",
+    "completion_school_district": "Kanowit"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/kapit": {
+   "state": "sarawak",
+   "name": "Kapit",
+   "names": {
+    "schools_district": "Kapit",
+    "enrolment_school_district": "Kapit",
+    "teachers_district": "Kapit",
+    "completion_school_district": "Kapit"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/kuching": {
+   "state": "sarawak",
+   "name": "Kuching",
+   "names": {
+    "schools_district": "Kuching",
+    "enrolment_school_district": "Kuching",
+    "teachers_district": "Kuching",
+    "completion_school_district": "Kuching"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/lawas": {
+   "state": "sarawak",
+   "name": "Lawas",
+   "names": {
+    "schools_district": "Lawas",
+    "enrolment_school_district": "Lawas",
+    "teachers_district": "Lawas",
+    "completion_school_district": "Lawas"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/limbang": {
+   "state": "sarawak",
+   "name": "Limbang",
+   "names": {
+    "schools_district": "Limbang",
+    "enrolment_school_district": "Limbang",
+    "teachers_district": "Limbang",
+    "completion_school_district": "Limbang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/lubok-antu": {
+   "state": "sarawak",
+   "name": "Lubok Antu",
+   "names": {
+    "schools_district": "Lubok Antu",
+    "enrolment_school_district": "Lubok Antu",
+    "teachers_district": "Lubok Antu",
+    "completion_school_district": "Lubok Antu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/lundu": {
+   "state": "sarawak",
+   "name": "Lundu",
+   "names": {
+    "schools_district": "Lundu",
+    "enrolment_school_district": "Lundu",
+    "teachers_district": "Lundu",
+    "completion_school_district": "Lundu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/maradong": {
+   "state": "sarawak",
+   "name": "Maradong",
+   "names": {
+    "schools_district": "Maradong",
+    "enrolment_school_district": "Maradong",
+    "teachers_district": "Maradong",
+    "completion_school_district": "Maradong"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/marudi": {
+   "state": "sarawak",
+   "name": "Marudi",
+   "names": {
+    "schools_district": "Marudi",
+    "enrolment_school_district": "Marudi",
+    "teachers_district": "Marudi"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/meradong": {
+   "state": "sarawak",
+   "name": "Meradong",
+   "names": {
+    "enrolment_school_district": "Meradong",
+    "teachers_district": "Meradong"
+   },
+   "first_date": "2023-06-30",
+   "geo_id": null
+  },
+  "sarawak/miri": {
+   "state": "sarawak",
+   "name": "Miri",
+   "names": {
+    "schools_district": "Miri",
+    "enrolment_school_district": "Miri",
+    "teachers_district": "Miri",
+    "completion_school_district": "Miri"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/mukah": {
+   "state": "sarawak",
+   "name": "Mukah",
+   "names": {
+    "schools_district": "Mukah",
+    "enrolment_school_district": "Mukah",
+    "teachers_district": "Mukah",
+    "completion_school_district": "Mukah"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/padawan": {
+   "state": "sarawak",
+   "name": "Padawan",
+   "names": {
+    "enrolment_school_district": "Padawan",
+    "teachers_district": "Padawan",
+    "completion_school_district": "Padawan"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "sarawak/pusa": {
+   "state": "sarawak",
+   "name": "Pusa",
+   "names": {
+    "schools_district": "Pusa",
+    "enrolment_school_district": "Pusa",
+    "teachers_district": "Pusa"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/samarahan": {
+   "state": "sarawak",
+   "name": "Samarahan",
+   "names": {
+    "schools_district": "Samarahan",
+    "enrolment_school_district": "Samarahan",
+    "teachers_district": "Samarahan",
+    "completion_school_district": "Samarahan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/saratok": {
+   "state": "sarawak",
+   "name": "Saratok",
+   "names": {
+    "schools_district": "Saratok",
+    "enrolment_school_district": "Saratok",
+    "teachers_district": "Saratok",
+    "completion_school_district": "Saratok"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/sarikei": {
+   "state": "sarawak",
+   "name": "Sarikei",
+   "names": {
+    "schools_district": "Sarikei",
+    "enrolment_school_district": "Sarikei",
+    "teachers_district": "Sarikei",
+    "completion_school_district": "Sarikei"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/sebauh": {
+   "state": "sarawak",
+   "name": "Sebauh",
+   "names": {
+    "schools_district": "Sebauh",
+    "enrolment_school_district": "Sebauh",
+    "teachers_district": "Sebauh"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/selangau": {
+   "state": "sarawak",
+   "name": "Selangau",
+   "names": {
+    "schools_district": "Selangau",
+    "enrolment_school_district": "Selangau",
+    "teachers_district": "Selangau",
+    "completion_school_district": "Selangau"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/serian": {
+   "state": "sarawak",
+   "name": "Serian",
+   "names": {
+    "schools_district": "Serian",
+    "enrolment_school_district": "Serian",
+    "teachers_district": "Serian",
+    "completion_school_district": "Serian"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/sibu": {
+   "state": "sarawak",
+   "name": "Sibu",
+   "names": {
+    "schools_district": "Sibu",
+    "enrolment_school_district": "Sibu",
+    "teachers_district": "Sibu",
+    "completion_school_district": "Sibu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/simunjan": {
+   "state": "sarawak",
+   "name": "Simunjan",
+   "names": {
+    "schools_district": "Simunjan",
+    "enrolment_school_district": "Simunjan",
+    "teachers_district": "Simunjan",
+    "completion_school_district": "Simunjan"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/song": {
+   "state": "sarawak",
+   "name": "Song",
+   "names": {
+    "schools_district": "Song",
+    "enrolment_school_district": "Song",
+    "teachers_district": "Song",
+    "completion_school_district": "Song"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/sri-aman": {
+   "state": "sarawak",
+   "name": "Sri Aman",
+   "names": {
+    "schools_district": "Sri Aman",
+    "enrolment_school_district": "Sri Aman",
+    "teachers_district": "Sri Aman",
+    "completion_school_district": "Sri Aman"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/subis": {
+   "state": "sarawak",
+   "name": "Subis",
+   "names": {
+    "schools_district": "Subis",
+    "enrolment_school_district": "Subis",
+    "teachers_district": "Subis",
+    "completion_school_district": "Subis"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/tatau": {
+   "state": "sarawak",
+   "name": "Tatau",
+   "names": {
+    "schools_district": "Tatau",
+    "enrolment_school_district": "Tatau",
+    "teachers_district": "Tatau"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "sarawak/tatau-sebauh": {
+   "state": "sarawak",
+   "name": "Tatau/Sebauh",
+   "names": {
+    "enrolment_school_district": "Tatau/Sebauh",
+    "teachers_district": "Tatau/Sebauh",
+    "completion_school_district": "Tatau/Sebauh"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "selangor/gombak": {
+   "state": "selangor",
+   "name": "Gombak",
+   "names": {
+    "schools_district": "Gombak",
+    "enrolment_school_district": "Gombak",
+    "teachers_district": "Gombak",
+    "completion_school_district": "Gombak"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "selangor/klang": {
+   "state": "selangor",
+   "name": "Klang",
+   "names": {
+    "schools_district": "Klang",
+    "enrolment_school_district": "Klang",
+    "teachers_district": "Klang",
+    "completion_school_district": "Klang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "selangor/kuala-langat": {
+   "state": "selangor",
+   "name": "Kuala Langat",
+   "names": {
+    "schools_district": "Kuala Langat",
+    "enrolment_school_district": "Kuala Langat",
+    "teachers_district": "Kuala Langat",
+    "completion_school_district": "Kuala Langat"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "selangor/kuala-selangor": {
+   "state": "selangor",
+   "name": "Kuala Selangor",
+   "names": {
+    "schools_district": "Kuala Selangor",
+    "enrolment_school_district": "Kuala Selangor",
+    "teachers_district": "Kuala Selangor",
+    "completion_school_district": "Kuala Selangor"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "selangor/petaling": {
+   "state": "selangor",
+   "name": "Petaling",
+   "names": {
+    "schools_district": "Petaling",
+    "enrolment_school_district": "Petaling",
+    "teachers_district": "Petaling"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "selangor/petaling-perdana": {
+   "state": "selangor",
+   "name": "Petaling Perdana",
+   "names": {
+    "enrolment_school_district": "Petaling Perdana",
+    "teachers_district": "Petaling Perdana",
+    "completion_school_district": "Petaling Perdana"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "selangor/petaling-utama": {
+   "state": "selangor",
+   "name": "Petaling Utama",
+   "names": {
+    "enrolment_school_district": "Petaling Utama",
+    "teachers_district": "Petaling Utama",
+    "completion_school_district": "Petaling Utama"
+   },
+   "first_date": "2021-01-01",
+   "geo_id": null
+  },
+  "selangor/sabak-bernam": {
+   "state": "selangor",
+   "name": "Sabak Bernam",
+   "names": {
+    "schools_district": "Sabak Bernam",
+    "enrolment_school_district": "Sabak Bernam",
+    "teachers_district": "Sabak Bernam",
+    "completion_school_district": "Sabak Bernam"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "selangor/sepang": {
+   "state": "selangor",
+   "name": "Sepang",
+   "names": {
+    "schools_district": "Sepang",
+    "enrolment_school_district": "Sepang",
+    "teachers_district": "Sepang",
+    "completion_school_district": "Sepang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "selangor/ulu-langat": {
+   "state": "selangor",
+   "name": "Ulu Langat",
+   "names": {
+    "schools_district": "Ulu Langat",
+    "enrolment_school_district": "Ulu Langat",
+    "teachers_district": "Ulu Langat",
+    "completion_school_district": "Ulu Langat"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "selangor/ulu-selangor": {
+   "state": "selangor",
+   "name": "Ulu Selangor",
+   "names": {
+    "schools_district": "Ulu Selangor",
+    "enrolment_school_district": "Ulu Selangor",
+    "teachers_district": "Ulu Selangor",
+    "completion_school_district": "Ulu Selangor"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "terengganu/besut": {
+   "state": "terengganu",
+   "name": "Besut",
+   "names": {
+    "schools_district": "Besut",
+    "enrolment_school_district": "Besut",
+    "teachers_district": "Besut",
+    "completion_school_district": "Besut"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "terengganu/dungun": {
+   "state": "terengganu",
+   "name": "Dungun",
+   "names": {
+    "schools_district": "Dungun",
+    "enrolment_school_district": "Dungun",
+    "teachers_district": "Dungun",
+    "completion_school_district": "Dungun"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "terengganu/hulu-terengganu": {
+   "state": "terengganu",
+   "name": "Hulu Terengganu",
+   "names": {
+    "schools_district": "Hulu Terengganu",
+    "enrolment_school_district": "Hulu Terengganu",
+    "teachers_district": "Hulu Terengganu",
+    "completion_school_district": "Hulu Terengganu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "terengganu/kemaman": {
+   "state": "terengganu",
+   "name": "Kemaman",
+   "names": {
+    "schools_district": "Kemaman",
+    "enrolment_school_district": "Kemaman",
+    "teachers_district": "Kemaman",
+    "completion_school_district": "Kemaman"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "terengganu/kuala-nerus": {
+   "state": "terengganu",
+   "name": "Kuala Nerus",
+   "names": {
+    "schools_district": "Kuala Nerus",
+    "enrolment_school_district": "Kuala Nerus",
+    "teachers_district": "Kuala Nerus",
+    "completion_school_district": "Kuala Nerus"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "terengganu/kuala-terengganu": {
+   "state": "terengganu",
+   "name": "Kuala Terengganu",
+   "names": {
+    "schools_district": "Kuala Terengganu",
+    "enrolment_school_district": "Kuala Terengganu",
+    "teachers_district": "Kuala Terengganu",
+    "completion_school_district": "Kuala Terengganu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "terengganu/marang": {
+   "state": "terengganu",
+   "name": "Marang",
+   "names": {
+    "schools_district": "Marang",
+    "enrolment_school_district": "Marang",
+    "teachers_district": "Marang",
+    "completion_school_district": "Marang"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  },
+  "terengganu/setiu": {
+   "state": "terengganu",
+   "name": "Setiu",
+   "names": {
+    "schools_district": "Setiu",
+    "enrolment_school_district": "Setiu",
+    "teachers_district": "Setiu",
+    "completion_school_district": "Setiu"
+   },
+   "first_date": "2017-01-01",
+   "geo_id": null
+  }
+ }
+}
