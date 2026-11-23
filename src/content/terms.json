@@ -144,24 +144,18 @@
       "id": "education-stage",
       "category": "stage",
       "en": "Education stage",
-      "ms": "Tahap pendidikan",
-      "note": "The dataset pages use both labels for the same column (\"Tahap Pendidikan\" in the variable table, \"Peringkat Pendidikan\" on chart labels). They are not interchangeable in Ministry of Education Bahasa Melayu: \"Peringkat\" names the stages themselves (prasekolah, rendah, menengah, lepas menengah) and also levels of government (peringkat negeri, daerah), while \"Tahap\" has the fixed Tahap 1 / Tahap 2 meaning inside primary school. Claude recommends \"Peringkat pendidikan\". Chris to decide.",
+      "ms": "Peringkat pendidikan",
+      "note": "Chris chose \"Peringkat pendidikan\" for the whole site on 23 Nov 2026. It is the Ministry of Education and DOSM wording for the stages. \"Tahap\" has a fixed meaning inside primary school (Tahap 1 = Years 1 to 3, Tahap 2 = Years 4 to 6), so it would confuse readers. Where a chart, source line or CSV download shows a dataset's own column name, the dataset's wording \"Tahap Pendidikan\" is kept.",
       "alternatives": [
         {
-          "ms": "Peringkat pendidikan",
-          "note": "Chart-label wording in the dataset metadata for enrolment, teachers and completion.",
+          "ms": "Tahap pendidikan",
+          "note": "The dataset pages call the column \"Tahap Pendidikan\" in their variable tables. Keep this wording only where the site shows a dataset's own column name (CSV headers, \"source column\" lines).",
           "sources": [
             {
               "tier": 1,
-              "label": "OpenDOSM dataset metadata (BM chart labels): enrolment_school_district",
-              "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
-              "quote": "Peringkat Pendidikan"
-            },
-            {
-              "tier": 2,
-              "label": "Ministry of Education: National Education Policy book, 4th edition",
-              "url": "https://www.moe.gov.my/storage/files/shares/Dasar/Dasar%20Pendidikan%20Kebangsaan/Dasar%20Pendidikan%20Kebangsaan%20Edisi%20Keempat.pdf",
-              "quote": "Peringkat pendidikan di Malaysia adalah daripada peringkat prasekolah"
+              "label": "OpenDOSM dataset page (BM): schools_district",
+              "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+              "quote": "Tahap Pendidikan"
             }
           ]
         }
@@ -169,9 +163,15 @@
       "sources": [
         {
           "tier": 1,
-          "label": "OpenDOSM dataset page (BM): schools_district",
-          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
-          "quote": "Tahap Pendidikan"
+          "label": "OpenDOSM dataset metadata (BM chart labels): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "Peringkat Pendidikan"
+        },
+        {
+          "tier": 2,
+          "label": "Ministry of Education: National Education Policy book, 4th edition",
+          "url": "https://www.moe.gov.my/storage/files/shares/Dasar/Dasar%20Pendidikan%20Kebangsaan/Dasar%20Pendidikan%20Kebangsaan%20Edisi%20Keempat.pdf",
+          "quote": "Peringkat pendidikan di Malaysia adalah daripada peringkat prasekolah"
         }
       ],
       "evidence": [
@@ -182,7 +182,12 @@
           "url": "https://www.moe.gov.my/storage/files/shares/pekeliling_dan_garis_panduan/Panduan%20Pengurusan%20PBS%20Edisi%201%20Tahun%202025.pdf",
           "quote": "Murid Tahap 1 (Tahun 1, Tahun 2 dan Tahun 3)"
         }
-      ]
+      ],
+      "decision": {
+        "by": "Chris",
+        "on": "2026-11-23",
+        "choice": "Peringkat pendidikan"
+      }
     },
     {
       "status": "sourced",
