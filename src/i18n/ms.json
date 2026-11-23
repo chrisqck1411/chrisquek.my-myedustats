@@ -1,0 +1,21 @@
+{
+  "site.name": "MyEduStats",
+  "site.tagline": "Statistik pendidikan Malaysia yang mudah difahami.",
+  "site.status": "Laman ini sedang dibina. Carta, peta dan muat turun akan datang.",
+  "skip": "Langkau ke kandungan utama",
+  "nav.label": "Tetapan laman",
+  "lang.switch": "English",
+  "lang.short": "EN",
+  "theme.toDark": "Tukar ke mod gelap",
+  "theme.toLight": "Tukar ke mod cerah",
+  "role.label": "Saya seorang",
+  "role.default": "Sekadar melayari",
+  "role.journalist": "Wartawan",
+  "role.researcher": "Penyelidik",
+  "role.parent": "Ibu bapa",
+  "role.policymaker": "Penggubal dasar",
+  "role.teacher": "Guru",
+  "footer.data": "Data daripada data.gov.my, berlesen CC BY 4.0.",
+  "footer.unofficial": "Tidak rasmi. Tiada kaitan dengan mana-mana agensi kerajaan.",
+  "footer.feedback": "Maklum balas"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "chrisquek.my-myedustats",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MyEduStats: free, unofficial education statistics for Malaysia (English and Bahasa Melayu).",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/check-i18n.mjs && astro build",
+    "preview": "astro preview",
+    "check:i18n": "node scripts/check-i18n.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.13",
+    "echarts": "^6.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

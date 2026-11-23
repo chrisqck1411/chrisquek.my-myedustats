@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="MyEduStats">
+  <rect width="32" height="32" rx="7" fill="#ffffff"/>
+  <rect x="5" y="16" width="6" height="11" rx="1.5" fill="#0b5cab"/>
+  <rect x="13" y="9" width="6" height="18" rx="1.5" fill="#0b7a5e"/>
+  <rect x="21" y="4" width="6" height="23" rx="1.5" fill="#0b5cab"/>
+</svg>

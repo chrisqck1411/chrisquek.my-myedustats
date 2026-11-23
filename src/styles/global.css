@@ -1,0 +1,206 @@
+/* MyEduStats - base styles. Colours are CSS variables so light and dark share one set of rules.
+   No inline styles are used anywhere (strict content policy). */
+
+:root {
+  color-scheme: light dark;
+  --bg: #f6f9fb;
+  --surface: #ffffff;
+  --text: #14202b;
+  --muted: #4f5d6b;
+  --border: #d3dce5;
+  --primary: #0b5cab;
+  --primary-contrast: #ffffff;
+  --accent: #0b7a5e;
+  --focus: #0b5cab;
+  --radius: 10px;
+  --max: 68rem;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0d1620;
+  --surface: #14212e;
+  --text: #e8eff5;
+  --muted: #a3b3c2;
+  --border: #2a3c4e;
+  --primary: #79b8ff;
+  --primary-contrast: #0d1620;
+  --accent: #4fcfa4;
+  --focus: #79b8ff;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+/* No script? Follow the device setting. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #0d1620;
+    --surface: #14212e;
+    --text: #e8eff5;
+    --muted: #a3b3c2;
+    --border: #2a3c4e;
+    --primary: #79b8ff;
+    --primary-contrast: #0d1620;
+    --accent: #4fcfa4;
+    --focus: #79b8ff;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: var(--primary); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 10;
+  padding: 0.6rem 1rem;
+  background: var(--primary);
+  color: var(--primary-contrast);
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+.skip-link:focus { top: 0.75rem; }
+
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 1rem; }
+
+/* Header */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.brand svg { width: 32px; height: 32px; flex: none; }
+.brand .bar-a { fill: var(--primary); }
+.brand .bar-b { fill: var(--accent); }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.control, .controls select, .controls button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.4rem 0.8rem;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+}
+.control:hover, .controls select:hover, .controls button:hover { border-color: var(--primary); }
+
+.role-field { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem; color: var(--muted); }
+
+/* Theme button shows a moon in light mode and a sun in dark mode. */
+.theme-toggle svg { width: 22px; height: 22px; fill: currentColor; }
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .theme-toggle .icon-sun { display: block; }
+  :root:not([data-theme]) .theme-toggle .icon-moon { display: none; }
+}
+
+/* Main */
+main { flex: 1; padding: 2rem 0 3rem; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.15; margin: 0 0 0.75rem; }
+.lead { font-size: 1.2rem; color: var(--muted); max-width: 40rem; margin: 0 0 1.5rem; }
+.notice {
+  max-width: 40rem;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.site-footer .wrap { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+.site-footer p { margin: 0.25rem 0; }
+
+/* Test page (temporary) */
+.test-list { padding-left: 1.2rem; }
+.test-list li { margin: 0.3rem 0; }
+.ok { color: var(--accent); font-weight: 700; }
+.bad { color: #c0392b; font-weight: 700; }
+:root[data-theme="dark"] .bad { color: #ff8a7a; }
+.chart-box {
+  width: 100%;
+  max-width: 36rem;
+  height: 280px;
+  margin: 1rem 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+@media (max-width: 40rem) {
+  .controls { width: 100%; }
+  .role-field { flex: 1 1 100%; }
+  .role-field select { flex: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

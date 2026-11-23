@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base lang="en" path="csp-test/" title="Security policy test" noindex singleLanguage>
+  <h1>Security policy test</h1>
+  <p class="lead">
+    Temporary page for checking that the strict content policy and the charts work together. Sample numbers only, not real statistics.
+  </p>
+  <p id="csp-summary" aria-live="polite">Running checks...</p>
+  <ul id="csp-log" class="test-list"></ul>
+  <div id="chart-canvas" class="chart-box" role="img" aria-label="Sample bar chart (canvas)"></div>
+  <div id="chart-svg" class="chart-box" role="img" aria-label="Sample bar chart (SVG)"></div>
+  <script>
+    import '../scripts/csp-test';
+  </script>
+</Base>
