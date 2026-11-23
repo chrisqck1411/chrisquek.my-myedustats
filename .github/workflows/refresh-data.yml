@@ -5,6 +5,7 @@
 # Chris taps merge. If a check fails, nothing is committed and the run shows as failed.
 #
 # It runs from the "staging" branch. The pull request contains everything that is on staging.
+# What the data files mean: data/README.md.
 name: Refresh data
 
 on:
