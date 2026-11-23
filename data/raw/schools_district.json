@@ -10,10 +10,10 @@
  "next_update": "2027-12-31 18:00",
  "update_frequency": "YEARLY",
  "row_count": 4514,
- "fetched_at": "2026-11-23T03:36:09.554Z",
+ "fetched_at": "2026-11-23T04:13:38.489Z",
  "columns": ["date","state","district","stage","type","schools"],
  "rows": [
-{"date":"2017-01-01","state":"Johor","district":"All Districts","stage":"primary","type":"Sekolah Rendah Kerajaan","schools":907,"level":"state","state_key":"johor","district_key":null,"flags":[]},
+{"date":"2017-01-01","state":"Johor","district":"All Districts","stage":"primary","type":"Sekolah Rendah Kerajaan","schools":906,"level":"state","state_key":"johor","district_key":null,"flags":[]},
 {"date":"2017-01-01","state":"Johor","district":"All Districts","stage":"secondary","type":"Sekolah Menengah Kerajaan","schools":277,"level":"state","state_key":"johor","district_key":null,"flags":[]},
 {"date":"2017-01-01","state":"Johor","district":"All Districts","stage":"tertiary","type":"IPTA","schools":2,"level":"state","state_key":"johor","district_key":null,"flags":[]},
 {"date":"2017-01-01","state":"Johor","district":"Batu Pahat","stage":"primary","type":"Sekolah Rendah Kerajaan","schools":144,"level":"district","state_key":"johor","district_key":"johor/batu-pahat","flags":[]},

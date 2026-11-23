@@ -1,18 +1,13 @@
 {
- "generated_at": "2026-11-23T03:36:09.583Z",
+ "generated_at": "2026-11-23T04:13:38.544Z",
  "changed_datasets": [
-  "schools_district",
-  "enrolment_school_district",
-  "teachers_district",
-  "completion_school_state",
-  "completion_school_district",
-  "lecturers_uni"
+  "schools_district"
  ],
  "datasets": {
   "schools_district": {
    "rows": 4514,
-   "added_rows": 4514,
-   "revised_values": 0,
+   "added_rows": 0,
+   "revised_values": 1,
    "data_as_of": "2025",
    "last_updated": "2026-10-11 12:00",
    "flags": {},
@@ -20,7 +15,7 @@
   },
   "enrolment_school_district": {
    "rows": 12756,
-   "added_rows": 12756,
+   "added_rows": 0,
    "revised_values": 0,
    "data_as_of": "2025",
    "last_updated": "2026-08-03 12:00",
@@ -29,7 +24,7 @@
   },
   "teachers_district": {
    "rows": 8805,
-   "added_rows": 8805,
+   "added_rows": 0,
    "revised_values": 0,
    "data_as_of": "2025",
    "last_updated": "2026-08-03 12:00",
@@ -38,7 +33,7 @@
   },
   "completion_school_state": {
    "rows": 1530,
-   "added_rows": 1530,
+   "added_rows": 0,
    "revised_values": 0,
    "data_as_of": "2025",
    "last_updated": "2026-10-11 12:00",
@@ -49,7 +44,7 @@
   },
   "completion_school_district": {
    "rows": 2355,
-   "added_rows": 2355,
+   "added_rows": 0,
    "revised_values": 0,
    "data_as_of": "2025",
    "last_updated": "2026-10-11 12:00",
@@ -61,7 +56,7 @@
   },
   "lecturers_uni": {
    "rows": 2700,
-   "added_rows": 2700,
+   "added_rows": 0,
    "revised_values": 0,
    "data_as_of": "2025",
    "last_updated": "2026-10-11 12:00",
@@ -69,10 +64,9 @@
    "totals_that_do_not_add_up": 108
   }
  },
- "notes": [
-  "places.json did not exist: created with 17 states and 176 districts."
- ],
+ "notes": [],
  "warnings": [
+  "schools_district: 1 earlier values were revised, e.g. 2017-01-01|Johor|All Districts|primary|Sekolah Rendah Kerajaan: 907 -> 906",
   "lecturers_uni: 108 totals do not add up (district rows vs state row, or state rows vs national row), e.g. states_vs_national 2014-01-01|All Universities|all|both: total 31917, parts 22103 ; states_vs_national 2014-01-01|All Universities|all|female: total 16872, parts 12135"
  ]
 }
