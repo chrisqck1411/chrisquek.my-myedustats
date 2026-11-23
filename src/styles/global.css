@@ -11,10 +11,11 @@
   --primary: #0b5cab;
   --primary-contrast: #ffffff;
   --accent: #0b7a5e;
+  --heading: #0b3d6b;
   --focus: #0b5cab;
-  --radius: 10px;
+  --radius: 14px;
   --max: 68rem;
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+  --font: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
 }
 
 :root[data-theme="dark"] {
@@ -27,6 +28,7 @@
   --primary: #79b8ff;
   --primary-contrast: #0d1620;
   --accent: #4fcfa4;
+  --heading: #e8eff5;
   --focus: #79b8ff;
 }
 
@@ -45,6 +47,7 @@
     --primary: #79b8ff;
     --primary-contrast: #0d1620;
     --accent: #4fcfa4;
+    --heading: #e8eff5;
     --focus: #79b8ff;
   }
 }
@@ -92,6 +95,7 @@ a:hover { text-decoration-thickness: 2px; }
 /* Header */
 .site-header {
   background: var(--surface);
+  border-top: 4px solid var(--primary);
   border-bottom: 1px solid var(--border);
 }
 .site-header .wrap {
@@ -109,13 +113,11 @@ a:hover { text-decoration-thickness: 2px; }
   gap: 0.6rem;
   min-height: 44px;
   font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--text);
+  font-size: 1.35rem;
+  color: var(--heading);
   text-decoration: none;
 }
-.brand svg { width: 32px; height: 32px; flex: none; }
-.brand .bar-a { fill: var(--primary); }
-.brand .bar-b { fill: var(--accent); }
+.brand-logo { width: 40px; height: 40px; flex: none; border-radius: 11px; }
 
 .controls {
   display: flex;
@@ -158,6 +160,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* Main */
 main { flex: 1; padding: 2rem 0 3rem; }
+h1, h2, h3 { color: var(--heading); font-weight: 700; }
 h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.15; margin: 0 0 0.75rem; }
 .lead { font-size: 1.2rem; color: var(--muted); max-width: 40rem; margin: 0 0 1.5rem; }
 .notice {
@@ -216,9 +219,10 @@ main h2 { margin: 2rem 0 0.75rem; font-size: 1.4rem; }
 }
 
 @media (max-width: 40rem) {
-  .controls { width: 100%; }
-  .role-field { flex: 1 1 100%; }
-  .role-field select { flex: 1; }
+  .controls { width: 100%; flex-wrap: nowrap; }
+  .role-field { flex: 1 1 auto; min-width: 0; }
+  .role-field span { white-space: nowrap; }
+  .role-field select { flex: 1; min-width: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

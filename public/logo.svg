@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="MyEduStats tapir logo">
+<clipPath id="badge1"><rect width="200" height="200" rx="44"/></clipPath>
+<rect width="200" height="200" rx="44" fill="#0b5cab"/>
+<g clip-path="url(#badge1)">
+<clipPath id="s1"><path d="M10 120 C10 108 20 100 38 94 C62 86 86 72 104 58 C116 49 132 46 146 48 C166 50 190 56 214 68 L214 214 L124 214 C124 190 118 170 104 156 C90 148 74 144 62 140 C54 138 52 134 56 130 C50 134 40 138 30 138 C18 138 10 130 10 120 Z" transform="translate(20,24) scale(0.86)"/></clipPath>
+<g transform="translate(20,24) scale(0.86)">
+<ellipse cx="132" cy="38" rx="18" ry="21" fill="#fff" transform="rotate(-10 132 38)"/>
+<path d="M10 120 C10 108 20 100 38 94 C62 86 86 72 104 58 C116 49 132 46 146 48 C166 50 190 56 214 68 L214 214 L124 214 C124 190 118 170 104 156 C90 148 74 144 62 140 C54 138 52 134 56 130 C50 134 40 138 30 138 C18 138 10 130 10 120 Z" fill="#141414" stroke="#fff" stroke-width="9" stroke-linejoin="round" paint-order="stroke"/>
+<ellipse cx="132" cy="44" rx="13" ry="16" fill="#141414" transform="rotate(-10 132 38)"/>
+</g>
+<g clip-path="url(#s1)"><path d="M160 50 C158 90 138 124 128 158 L124 214 L214 214 L214 50 Z" fill="#fff" transform="translate(20,24) scale(0.86)"/>
+</g>
+<g transform="translate(20,24) scale(0.86)">
+<circle cx="88" cy="90" r="8" fill="#fff"/><circle cx="86.5" cy="91" r="5" fill="#141414"/><circle cx="84.5" cy="89" r="1.8" fill="#fff"/>
+<ellipse cx="17" cy="124" rx="2.6" ry="4.4" fill="#6a6a6a" transform="rotate(-10 21 123)"/>
+<path d="M56 133 C48 133 42 130 38 125" fill="none" stroke="#6a6a6a" stroke-width="2.4" stroke-linecap="round"/>
+</g>
+</g>
+<rect x="2" y="2" width="196" height="196" rx="42" fill="none" stroke="#0b3d6b" stroke-width="4"/>
+</svg>
