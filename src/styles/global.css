@@ -179,6 +179,26 @@ h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.15; margin: 0 0 0.75r
 .site-footer .wrap { padding-top: 1.25rem; padding-bottom: 1.25rem; }
 .site-footer p { margin: 0.25rem 0; }
 
+/* Terminology register review page */
+.term-meta { color: var(--muted); margin: 0 0 1.5rem; }
+main h2 { margin: 2rem 0 0.75rem; font-size: 1.4rem; }
+.term-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  margin: 0.6rem 0;
+  max-width: 48rem;
+}
+.term-card h3 { margin: 0 0 0.3rem; font-size: 1.05rem; line-height: 1.35; }
+.term-card p { margin: 0.3rem 0; }
+.term-flag { border-left: 5px solid #b7791f; }
+.term-arrow { margin: 0 0.4rem; color: var(--muted); }
+.term-ms strong, h3 .term-ms { color: var(--accent); }
+.term-def, .term-note { color: var(--muted); font-size: 0.95rem; }
+.term-sources { margin: 0.4rem 0 0; padding-left: 1.2rem; font-size: 0.9rem; color: var(--muted); }
+.term-sources li { margin: 0.2rem 0; overflow-wrap: anywhere; }
+
 /* Test page (temporary) */
 .test-list { padding-left: 1.2rem; }
 .test-list li { margin: 0.3rem 0; }

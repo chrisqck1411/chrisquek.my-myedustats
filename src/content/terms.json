@@ -1,0 +1,1111 @@
+{
+  "version": 1,
+  "updated": "2026-11-23",
+  "terms": [
+    {
+      "status": "sourced",
+      "id": "stage-primary",
+      "category": "stage",
+      "en": "Primary",
+      "ms": "Rendah",
+      "definition_en": "Standards 1 to 6",
+      "definition_ms": "Darjah 1 hingga 6",
+      "data_values": [
+        {
+          "field": "stage",
+          "value": "primary"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "pendidikan rendah (Darjah 1 hingga 6)"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "stage-secondary",
+      "category": "stage",
+      "en": "Secondary",
+      "ms": "Menengah",
+      "definition_en": "Form 1 to 5",
+      "definition_ms": "Tingkatan 1 hingga 5",
+      "data_values": [
+        {
+          "field": "stage",
+          "value": "secondary"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "menengah (Tingkatan 1 hingga 5)"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "stage-lower-secondary",
+      "category": "stage",
+      "en": "Lower secondary",
+      "ms": "Menengah rendah",
+      "definition_en": "Form 1 to 3",
+      "definition_ms": "Tingkatan 1 hingga 3",
+      "data_values": [
+        {
+          "field": "stage",
+          "value": "secondary_lower"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): completion_school_state",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_state",
+          "quote": "menengah rendah (Tingkatan 1 hingga 3)"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "stage-upper-secondary",
+      "category": "stage",
+      "en": "Upper secondary",
+      "ms": "Menengah atas",
+      "definition_en": "Form 4 to 5",
+      "definition_ms": "Tingkatan 4 hingga 5",
+      "data_values": [
+        {
+          "field": "stage",
+          "value": "secondary_upper"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): completion_school_state",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_state",
+          "quote": "menengah atas (Tingkatan 4 hingga 5)"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "stage-post-secondary",
+      "category": "stage",
+      "en": "Post-secondary",
+      "ms": "Pasca menengah",
+      "definition_en": "Form 6",
+      "definition_ms": "Tingkatan 6",
+      "data_values": [
+        {
+          "field": "stage",
+          "value": "post_secondary"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "pasca menengah (Tingkatan 6)"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "stage-tertiary",
+      "category": "stage",
+      "en": "Tertiary",
+      "ms": "Pengajian tinggi",
+      "data_values": [
+        {
+          "field": "stage",
+          "value": "tertiary"
+        }
+      ],
+      "note": "The same dataset description also says \"pendidikan ... tinggi\" for the institutions; the stage label itself is \"Pengajian Tinggi\".",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "sama ada pendidikan rendah, menengah, atau pengajian tinggi"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "education-stage",
+      "category": "stage",
+      "en": "Education stage",
+      "ms": "Tahap pendidikan",
+      "note": "The official sources use two labels for the same column: \"Tahap Pendidikan\" (variable table of the dataset pages) and \"Peringkat Pendidikan\" (chart labels of the same datasets). Chris to pick one for the whole site.",
+      "alternatives": [
+        {
+          "ms": "Peringkat pendidikan",
+          "note": "Chart-label wording in the dataset metadata for enrolment, teachers and completion.",
+          "sources": [
+            {
+              "tier": 1,
+              "label": "OpenDOSM dataset metadata (BM chart labels): enrolment_school_district",
+              "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+              "quote": "Peringkat Pendidikan"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "Tahap Pendidikan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "standard-darjah",
+      "category": "stage",
+      "en": "Standard (primary year group)",
+      "ms": "Darjah",
+      "note": "The datasets say \"Darjah 1 hingga 6\". Newer Ministry of Education pages say \"Tahun 1\" for the same year group.",
+      "alternatives": [
+        {
+          "ms": "Tahun",
+          "note": "Ministry of Education wording for the first year of primary school.",
+          "sources": [
+            {
+              "tier": 2,
+              "label": "Ministry of Education: deferral to Year 1",
+              "url": "https://www.moe.gov.my/dasar-pengoperasian-pengecualian-daripada-mengikuti-pendidikan-wajib-penangguhan-ke-tahun-1",
+              "quote": "Penangguhan Ke Tahun 1"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "pendidikan rendah (Darjah 1 hingga 6)"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "form-tingkatan",
+      "category": "stage",
+      "en": "Form (secondary year group)",
+      "ms": "Tingkatan",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "menengah (Tingkatan 1 hingga 5)"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "school",
+      "category": "institution",
+      "en": "School",
+      "ms": "Sekolah",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "Bilangan sekolah atau institusi"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "government-school",
+      "category": "institution",
+      "en": "Government school",
+      "ms": "Sekolah kerajaan",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "di sekolah kerajaan di peringkat nasional"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "type-gov-primary",
+      "category": "institution",
+      "en": "Government primary school",
+      "ms": "Sekolah Rendah Kerajaan",
+      "data_values": [
+        {
+          "field": "type",
+          "value": "Sekolah Rendah Kerajaan"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "Sekolah Rendah Kerajaan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "type-gov-secondary",
+      "category": "institution",
+      "en": "Government secondary school",
+      "ms": "Sekolah Menengah Kerajaan",
+      "data_values": [
+        {
+          "field": "type",
+          "value": "Sekolah Menengah Kerajaan"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "Sekolah Menengah Kerajaan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "type-teacher-institute",
+      "category": "institution",
+      "en": "Teacher education institute",
+      "ms": "Institut Pendidikan Guru",
+      "data_values": [
+        {
+          "field": "type",
+          "value": "Institut Pendidikan Guru"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "institut pendidikan guru, politeknik, dan kolej komuniti hanya tersedia di peringkat nasional"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "type-polytechnic",
+      "category": "institution",
+      "en": "Polytechnic",
+      "ms": "Politeknik",
+      "data_values": [
+        {
+          "field": "type",
+          "value": "Politeknik"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "institut pendidikan guru, politeknik, dan kolej komuniti hanya tersedia di peringkat nasional"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "type-community-college",
+      "category": "institution",
+      "en": "Community college",
+      "ms": "Kolej Komuniti",
+      "data_values": [
+        {
+          "field": "type",
+          "value": "Kolej Komuniti"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "institut pendidikan guru, politeknik, dan kolej komuniti hanya tersedia di peringkat nasional"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "type-public-he",
+      "category": "institution",
+      "en": "Public higher education institution",
+      "ms": "Institusi Pengajian Tinggi Awam",
+      "note": "The data value is the abbreviation \"IPTA\"; the dataset metadata gives the full BM name.",
+      "data_values": [
+        {
+          "field": "type",
+          "value": "IPTA"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset metadata (BM labels): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "Institusi Pengajian Tinggi Awam"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "university",
+      "category": "institution",
+      "en": "University",
+      "ms": "Universiti",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "Pensyarah di Universiti Awam mengikut Kewarganegaraan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "public-university",
+      "category": "institution",
+      "en": "Public university",
+      "ms": "Universiti awam",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "Pensyarah di Universiti Awam mengikut Kewarganegaraan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "all-universities",
+      "category": "institution",
+      "en": "All universities",
+      "ms": "Semua universiti",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset metadata (BM labels): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "Semua Universiti"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "number-of-schools",
+      "category": "measure",
+      "en": "Number of schools",
+      "ms": "Bilangan sekolah",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "Bilangan Sekolah"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "enrolment",
+      "category": "measure",
+      "en": "Enrolment",
+      "ms": "Enrolmen",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "Enrolmen di Sekolah Kerajaan mengikut Daerah"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "number-of-students",
+      "category": "measure",
+      "en": "Number of students",
+      "ms": "Bilangan pelajar",
+      "note": "The datasets say \"pelajar\" for students. Ministry of Education texts usually say \"murid\" for school pupils; see the alternative.",
+      "alternatives": [
+        {
+          "ms": "Murid",
+          "note": "Ministry of Education wording for pupils in primary and secondary school.",
+          "sources": [
+            {
+              "tier": 2,
+              "label": "Ministry of Education: starting-school aid",
+              "url": "https://www.moe.gov.my/bantuan-awal-persekolahan",
+              "quote": "keperluan persekolahan murid"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "Bilangan Pelajar"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "number-of-teachers",
+      "category": "measure",
+      "en": "Number of teachers",
+      "ms": "Bilangan guru",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): teachers_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/teachers_district",
+          "quote": "Bilangan Guru"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "completion-rate",
+      "category": "measure",
+      "en": "Completion rate",
+      "ms": "Kadar tamat pengajian",
+      "definition_en": "Share of students who complete a stage of education, relative to the cohort that started that stage",
+      "definition_ms": "Peratusan pelajar yang selesai peringkat pendidikan tersebut, berbanding jumlah kohort yang memulakan peringkat tersebut",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): completion_school_state",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_state",
+          "quote": "Kadar Tamat Pengajian"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "cohort",
+      "category": "measure",
+      "en": "Cohort",
+      "ms": "Kohort",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): completion_school_state",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_state",
+          "quote": "jumlah kohort yang memulakan peringkat tersebut"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "dropout",
+      "category": "measure",
+      "en": "Dropout",
+      "ms": "dropout",
+      "note": "The dataset keeps the English word, in quotation marks, even in its BM text. No BM equivalent was found in the sources; do not invent one.",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): completion_school_state",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_state",
+          "quote": "kadar 'dropout' di Malaysia amat rendah"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "repeating-grade",
+      "category": "measure",
+      "en": "Repeating a grade",
+      "ms": "Mengulang gredi",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): completion_school_state",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_state",
+          "quote": "yang mengulang gredi atau berpindah antara negeri"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "academic-staff",
+      "category": "measure",
+      "en": "Academic staff",
+      "ms": "Staf akademik",
+      "definition_en": "Professors, associate professors, lecturers, language teachers and other academic positions such as research fellows and tutors",
+      "definition_ms": "Profesor, profesor madya, pensyarah, guru bahasa, dan jawatan akademik lain seperti felo penyelidik dan tutor",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "Staf Akademik"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "teacher",
+      "category": "person",
+      "en": "Teacher",
+      "ms": "Guru",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): teachers_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/teachers_district",
+          "quote": "Guru di Sekolah Kerajaan mengikut Daerah"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "student",
+      "category": "person",
+      "en": "Student",
+      "ms": "Pelajar",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "Bilangan pelajar yang berdaftar"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "lecturer",
+      "category": "person",
+      "en": "Lecturer",
+      "ms": "Pensyarah",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "Pensyarah di Universiti Awam mengikut Kewarganegaraan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "professor",
+      "category": "person",
+      "en": "Professor",
+      "ms": "Profesor",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "profesor, profesor madya, pensyarah, guru bahasa"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "associate-professor",
+      "category": "person",
+      "en": "Associate professor",
+      "ms": "Profesor madya",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "profesor, profesor madya, pensyarah, guru bahasa"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "language-teacher",
+      "category": "person",
+      "en": "Language teacher",
+      "ms": "Guru bahasa",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "profesor, profesor madya, pensyarah, guru bahasa"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "research-fellow",
+      "category": "person",
+      "en": "Research fellow",
+      "ms": "Felo penyelidik",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "seperti felo penyelidik dan tutor"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "tutor",
+      "category": "person",
+      "en": "Tutor",
+      "ms": "Tutor",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "seperti felo penyelidik dan tutor"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "sex",
+      "category": "breakdown",
+      "en": "Sex",
+      "ms": "Jantina",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "Jantina"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "sex-both",
+      "category": "breakdown",
+      "en": "Both sexes",
+      "ms": "Kedua-dua jantina",
+      "data_values": [
+        {
+          "field": "sex",
+          "value": "both"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "Sama ada kedua-dua jantina, lelaki, atau perempuan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "sex-male",
+      "category": "breakdown",
+      "en": "Male",
+      "ms": "Lelaki",
+      "data_values": [
+        {
+          "field": "sex",
+          "value": "male"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "Sama ada kedua-dua jantina, lelaki, atau perempuan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "sex-female",
+      "category": "breakdown",
+      "en": "Female",
+      "ms": "Perempuan",
+      "data_values": [
+        {
+          "field": "sex",
+          "value": "female"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+          "quote": "Sama ada kedua-dua jantina, lelaki, atau perempuan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "citizenship",
+      "category": "breakdown",
+      "en": "Citizenship",
+      "ms": "Kewarganegaraan",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "Kewarganegaraan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "citizenship-all",
+      "category": "breakdown",
+      "en": "All nationalities",
+      "ms": "Semua kewarganegaraan",
+      "data_values": [
+        {
+          "field": "citizenship",
+          "value": "all"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset metadata (BM labels): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "Semua Kewarganegaraan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "citizenship-citizen",
+      "category": "breakdown",
+      "en": "Citizen",
+      "ms": "Warganegara",
+      "data_values": [
+        {
+          "field": "citizenship",
+          "value": "citizen"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "warganegara ('citizen'), atau bukan warganegara ('non_citizen')"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "citizenship-non-citizen",
+      "category": "breakdown",
+      "en": "Non-citizen",
+      "ms": "Bukan warganegara",
+      "data_values": [
+        {
+          "field": "citizenship",
+          "value": "non_citizen"
+        }
+      ],
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "warganegara ('citizen'), atau bukan warganegara ('non_citizen')"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "national",
+      "category": "geography",
+      "en": "National",
+      "ms": "Nasional",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): teachers_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/teachers_district",
+          "quote": "di peringkat nasional, negeri, dan daerah"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "state",
+      "category": "geography",
+      "en": "State",
+      "ms": "Negeri",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): teachers_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/teachers_district",
+          "quote": "Negeri"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "district",
+      "category": "geography",
+      "en": "District",
+      "ms": "Daerah",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): teachers_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/teachers_district",
+          "quote": "Daerah"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "all-districts",
+      "category": "geography",
+      "en": "All districts",
+      "ms": "Semua daerah",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): teachers_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/teachers_district",
+          "quote": "atau 'Semua Daerah' untuk data peringkat negeri"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "district-education-office",
+      "category": "organisation",
+      "en": "District Education Office",
+      "ms": "Pejabat Pendidikan Daerah",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): completion_school_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_district",
+          "quote": "Daerah adalah mengikut Pejabat Pendidikan Daerah"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "state-education-department",
+      "category": "organisation",
+      "en": "State Education Department",
+      "ms": "Jabatan Pendidikan Negeri",
+      "sources": [
+        {
+          "tier": 2,
+          "label": "Ministry of Education: deferral to Year 1",
+          "url": "https://www.moe.gov.my/dasar-pengoperasian-pengecualian-daripada-mengikuti-pendidikan-wajib-penangguhan-ke-tahun-1",
+          "quote": "kepada Jabatan Pendidikan Negeri"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "moe",
+      "category": "organisation",
+      "en": "Ministry of Education Malaysia",
+      "ms": "Kementerian Pendidikan Malaysia",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "Kementerian Pendidikan Malaysia"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "mohe",
+      "category": "organisation",
+      "en": "Ministry of Higher Education",
+      "ms": "Kementerian Pengajian Tinggi",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): lecturers_uni",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/lecturers_uni",
+          "quote": "Kementerian Pengajian Tinggi"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "emis",
+      "category": "organisation",
+      "en": "Education Management Information System (EMIS)",
+      "ms": "Sistem Pengurusan Maklumat Pendidikan (EMIS)",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): schools_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
+          "quote": "Sistem Pengurusan Maklumat Pendidikan (EMIS)"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "role-journalist",
+      "category": "role",
+      "en": "Journalist",
+      "ms": "Wartawan",
+      "ui_key": "role.journalist",
+      "sources": [
+        {
+          "tier": 2,
+          "label": "DOSM MySubNasional, About page",
+          "url": "https://mysubnasional.dosm.gov.my/about",
+          "quote": "Penyelidik, wartawan dan penggubal dasar yang perlukan rujukan pantas."
+        },
+        {
+          "tier": 3,
+          "label": "DBP PRPM, headword \"wartawan\"",
+          "url": "https://prpm.dbp.gov.my/Cari1?keyword=wartawan",
+          "quote": "wartawan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "role-researcher",
+      "category": "role",
+      "en": "Researcher",
+      "ms": "Penyelidik",
+      "ui_key": "role.researcher",
+      "sources": [
+        {
+          "tier": 2,
+          "label": "DOSM MySubNasional, About page",
+          "url": "https://mysubnasional.dosm.gov.my/about",
+          "quote": "Penyelidik, wartawan dan penggubal dasar yang perlukan rujukan pantas."
+        },
+        {
+          "tier": 2,
+          "label": "DOSM media release: Children Statistics 2025",
+          "url": "https://www.dosm.gov.my/uploads/release-content/file_20260312111843.pdf",
+          "quote": "pembuat dasar, penyelidik dan pihak berkepentingan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "role-parent",
+      "category": "role",
+      "en": "Parent",
+      "ms": "Ibu bapa",
+      "ui_key": "role.parent",
+      "note": "Ministry of Education guideline quoting the Education Act 1996: \"ibu bapa\" includes guardians.",
+      "sources": [
+        {
+          "tier": 2,
+          "label": "Ministry of Education: Safe School Management Guideline 2026",
+          "url": "https://www.moe.gov.my/storage/files/shares/pekeliling_dan_garis_panduan/ikhtisas/2026/SPI%20KPM%20BIL.%203%202026%20-%20GP%20PSS.pdf",
+          "quote": "Ibu bapa” termasuklah penjaga"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "role-policymaker",
+      "category": "role",
+      "en": "Policymaker",
+      "ms": "Penggubal dasar",
+      "ui_key": "role.policymaker",
+      "note": "Both \"penggubal dasar\" and \"pembuat dasar\" are used officially (see alternative). DBP defines \"penggubal\" as someone who drafts laws or terms, which is narrower. Chris to choose; the site currently uses \"Penggubal dasar\".",
+      "alternatives": [
+        {
+          "ms": "Pembuat dasar",
+          "note": "Used by DOSM on OpenDOSM and in its releases.",
+          "sources": [
+            {
+              "tier": 2,
+              "label": "OpenDOSM dashboard: Formal Sector Wages (BM)",
+              "url": "https://open.dosm.gov.my/ms-MY/dashboard/formal-sector-wages",
+              "quote": "Bagi membantu pembuat dasar yang perlu membuat keputusan"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "tier": 2,
+          "label": "DOSM MySubNasional, About page",
+          "url": "https://mysubnasional.dosm.gov.my/about",
+          "quote": "Penyelidik, wartawan dan penggubal dasar yang perlukan rujukan pantas."
+        },
+        {
+          "tier": 2,
+          "label": "Ministry of Education: National Education Policy book, 4th edition",
+          "url": "https://www.moe.gov.my/storage/files/shares/Dasar/Dasar%20Pendidikan%20Kebangsaan/Dasar%20Pendidikan%20Kebangsaan%20Edisi%20Keempat.pdf",
+          "quote": "KPM sebagai penggubal dasar pendidikan"
+        }
+      ]
+    },
+    {
+      "status": "sourced",
+      "id": "role-teacher",
+      "category": "role",
+      "en": "Teacher",
+      "ms": "Guru",
+      "ui_key": "role.teacher",
+      "sources": [
+        {
+          "tier": 1,
+          "label": "OpenDOSM dataset page (BM): teachers_district",
+          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/teachers_district",
+          "quote": "Guru di Sekolah Kerajaan mengikut Daerah"
+        }
+      ]
+    },
+    {
+      "id": "role-default",
+      "category": "role",
+      "en": "Just browsing",
+      "ms": null,
+      "ms_draft": "Sekadar melayari",
+      "ui_key": "role.default",
+      "status": "flagged",
+      "note": "No official source found for this wording. It is a plain-language phrase, not an education term, so Chris should confirm by eye or choose another phrase. The PRPM lookup for \"melayari\" did not return a usable page.",
+      "sources": []
+    }
+  ]
+}
