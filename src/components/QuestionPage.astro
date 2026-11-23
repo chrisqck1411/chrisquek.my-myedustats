@@ -1,0 +1,90 @@
+---
+// One question page: the question, the answer in one sentence, the "What does this mean?" panel, then the ranked lists.
+// Everything is plain HTML (tables, a native <details>), so it works with no script, in a screen reader and on a slow connection.
+import Base from '../layouts/Base.astro';
+import MeaningPanel from './MeaningPanel.astro';
+import { t, pathFor, type Lang } from '../i18n';
+import { fillTemplate } from '../lib/figures.mjs';
+import type { Question, QuestionTable, Row } from '../lib/questions';
+
+interface Props {
+  lang: Lang;
+  /** Page path without language prefix, e.g. "questions/students-per-teacher/" */
+  path: string;
+  question: Question;
+}
+const { lang, path, question } = Astro.props;
+const q = question;
+
+function head(table: QuestionTable) {
+  return table.head;
+}
+---
+
+<Base lang={lang} path={path} title={q.title}>
+  <p class="crumb"><a href={pathFor(lang, '')}>{t(lang, 'notfound.home')}</a></p>
+  <h1>{q.title}</h1>
+  <p class="asat-line">{q.asAt}</p>
+  <p class="chart-note">{q.answer}</p>
+  <p class="ref-line">{q.reference}</p>
+  <MeaningPanel lang={lang} counted={q.counted} howto={q.howto} keep={q.keep} sourceUrl={q.sources[0].url} sources={q.sources} howtoFor="list" />
+
+  {q.tables.map((table) => {
+    const cols = head(table);
+    const withState = table.id === 'districts';
+    const valueHead = cols[cols.length - 1];
+    const renderRows = (rows: Row[]) => rows.map((row) => (
+      <tr>
+        <th scope="row" class="rank">{row.rank}</th>
+        <td class="place">
+          <span class="place-name">{row.place}</span>
+          {withState && row.state && <span class="place-state">{row.state}</span>}
+        </td>
+        <td class="num">
+          <span class="num-text">{row.value}</span>
+          {row.bar !== undefined && <span class="bar" style={`--w:${row.bar}%`} aria-hidden="true"></span>}
+        </td>
+      </tr>
+    ));
+    const tableMarkup = (rows: Row[], caption: string) => (
+      <div class="table-wrap">
+        <table class="ranked">
+          <caption>{caption}</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="rank">{cols[0]}</th>
+              <th scope="col">{cols[1]}</th>
+              <th scope="col" class="num">{valueHead}</th>
+            </tr>
+          </thead>
+          <tbody>{renderRows(rows)}</tbody>
+        </table>
+      </div>
+    );
+    return (
+      <section class="ranked-section" aria-labelledby={`h-${table.id}`}>
+        <h2 id={`h-${table.id}`}>{table.title}</h2>
+        {table.endsFirst ? (
+          <>
+            <div class="ends">
+              <div>{tableMarkup(table.endsFirst.rows, table.endsFirst.label)}</div>
+              {table.endsLast && <div>{tableMarkup(table.endsLast.rows, table.endsLast.label)}</div>}
+            </div>
+            <details class="datatable">
+              <summary>{fillTemplate(t(lang, 'q.show.all'), { n: table.rows.length })}</summary>
+              {tableMarkup(table.rows, table.title)}
+            </details>
+          </>
+        ) : (
+          tableMarkup(table.rows, table.title)
+        )}
+      </section>
+    );
+  })}
+
+  {q.leftOut.length > 0 && (
+    <div class="left-out">
+      {q.leftOut.map((line) => <p>{line}</p>)}
+    </div>
+  )}
+</Base>

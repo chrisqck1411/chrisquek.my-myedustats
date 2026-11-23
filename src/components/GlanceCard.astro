@@ -22,5 +22,7 @@ const { lang, card } = Astro.props;
     ))}
   </dl>
   <MeaningPanel lang={lang} counted={card.counted} keep={card.keep} sourceUrl={card.sourceUrl} />
-  {card.chartHref && <a class="card-link" href={card.chartHref}>{t(lang, 'chart.link')}</a>}
+  <div class="card-foot">
+    {card.chartHref && <a class="card-link" href={card.chartHref}>{t(lang, 'chart.link')}</a>}
+  </div>
 </article>

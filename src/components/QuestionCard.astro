@@ -1,0 +1,45 @@
+---
+// One home-page card for one question: the question, the answer's two ends (top 3 and bottom 3), the Malaysia figure,
+// the "What does this mean?" panel and a link to the full ranked list. Plain HTML, no script.
+import MeaningPanel from './MeaningPanel.astro';
+import { t, pathFor, type Lang } from '../i18n';
+import type { Question, Row } from '../lib/questions';
+
+interface Props {
+  lang: Lang;
+  question: Question;
+}
+const { lang, question: q } = Astro.props;
+const href = pathFor(lang, `questions/${q.id}/`);
+const lists: { label: string; rows: Row[] }[] = [
+  { label: q.card.firstLabel, rows: q.card.first },
+  // The far end of a ranking is listed most extreme first (Song 6.1, then 6.3), like the first list.
+  { label: q.card.lastLabel, rows: [...q.card.last].reverse() },
+].filter((l) => l.rows.length > 0);
+---
+
+<article class="card q-card" id={`question-${q.id}`}>
+  <h3><a href={href}>{q.title}</a></h3>
+  <p class="card-asat">{q.asAt}</p>
+  {lists.map((list) => (
+    <div class="q-list">
+      <h4>{list.label}</h4>
+      <ol class="q-rows">
+        {list.rows.map((row) => (
+          <li>
+            <span class="q-place">
+              <span class="q-name">{row.place}</span>
+              {row.state && row.state !== row.place && <span class="q-state">{row.state}</span>}
+            </span>
+            <span class="q-value">{row.value}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  ))}
+  <p class="q-ref">{q.reference}</p>
+  <MeaningPanel lang={lang} counted={q.counted} howto={q.howto} howtoFor="list" keep={q.keep} sourceUrl={q.sources[0].url} sources={q.sources} />
+  <div class="card-foot">
+    <a class="card-link" href={href}>{t(lang, 'q.more')}</a>
+  </div>
+</article>

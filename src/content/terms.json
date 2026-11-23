@@ -289,6 +289,10 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
           "quote": "Bilangan sekolah atau institusi"
         }
+      ],
+      "ui_contains": [
+        "q.size.title",
+        "q.size.measure"
       ]
     },
     {
@@ -570,6 +574,31 @@
     },
     {
       "status": "sourced",
+      "id": "pupil-teacher-ratio",
+      "category": "measure",
+      "en": "Pupil-teacher ratio",
+      "ms": "Nisbah murid-guru",
+      "note": "The Ministry's and DOSM's name for the number of pupils for each teacher. The site's own measure is called \"Students per teacher\" (BM \"Pelajar bagi setiap guru\") because it is our own calculation from two published counts, not the official ratio, and because the site writes \"students\" and \"pelajar\". This term is recorded as evidence and is not used on the site.",
+      "sources": [
+        {
+          "tier": 2,
+          "label": "Ministry of Education Malaysia, Malaysia Education Blueprint 2013-2025, chapter 3 (PPPM)",
+          "url": "https://pppm.moe.gov.my/images/pppm/muat-turun/pdf/bab-3.pdf",
+          "quote": "Nisbah murid-guru"
+        }
+      ],
+      "evidence": [
+        {
+          "tier": 2,
+          "label": "DOSM, Children Statistics Malaysia 2025, table 3.17",
+          "url": "https://storage.dosm.gov.my/children/children_2024.pdf",
+          "quote": "Nisbah murid guru di sekolah kerajaan & bantuan kerajaan mengikut peringkat pendidikan",
+          "point": "DOSM names the same measure \"Nisbah murid guru\" (English: Pupil-teacher ratio in government & government-aided schools by level of education)."
+        }
+      ]
+    },
+    {
+      "status": "sourced",
       "id": "completion-rate",
       "category": "measure",
       "en": "Completion rate",
@@ -586,7 +615,8 @@
       ],
       "ui_key": "card.completion.title",
       "ui_contains": [
-        "chart.completion.title"
+        "chart.completion.title",
+        "q.completion.measure"
       ]
     },
     {
@@ -668,7 +698,11 @@
       ],
       "ui_contains": [
         "card.teachers.title",
-        "chart.teachers.title"
+        "chart.teachers.title",
+        "q.ratio.title",
+        "q.ratio.measure",
+        "q.ratio.counted",
+        "q.ratio.keep"
       ]
     },
     {
@@ -687,7 +721,13 @@
       ],
       "ui_contains": [
         "card.students.title",
-        "chart.students.title"
+        "chart.students.title",
+        "q.ratio.title",
+        "q.ratio.measure",
+        "q.size.title",
+        "q.size.measure",
+        "q.trend.title",
+        "q.trend.measure"
       ]
     },
     {
@@ -964,7 +1004,8 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/teachers_district",
           "quote": "Negeri"
         }
-      ]
+      ],
+      "ui_key": "col.state"
     },
     {
       "status": "sourced",
@@ -979,7 +1020,8 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/teachers_district",
           "quote": "Daerah"
         }
-      ]
+      ],
+      "ui_key": "col.district"
     },
     {
       "status": "sourced",
@@ -1009,6 +1051,9 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_district",
           "quote": "Daerah adalah mengikut Pejabat Pendidikan Daerah"
         }
+      ],
+      "ui_contains": [
+        "q.completion.keep.offices"
       ]
     },
     {
