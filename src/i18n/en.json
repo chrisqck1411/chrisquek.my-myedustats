@@ -17,5 +17,8 @@
   "role.teacher": "Teacher",
   "footer.data": "Data from data.gov.my, licensed CC BY 4.0.",
   "footer.unofficial": "Unofficial. Not affiliated with any government agency.",
-  "footer.feedback": "Feedback"
+  "footer.feedback": "Feedback",
+  "notfound.title": "Page not found",
+  "notfound.text": "This page does not exist or has moved.",
+  "notfound.home": "Go to the home page"
 }

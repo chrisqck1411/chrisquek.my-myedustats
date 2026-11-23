@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import { t, pathFor } from '../i18n';
+---
+
+<!-- Shown for any address that does not exist. It is served at the address that was asked for,
+     so it cannot know the visitor's language and shows both. -->
+<Base lang="en" path="" title={t('en', 'notfound.title')} noindex singleLanguage>
+  <h1>{t('en', 'notfound.title')}</h1>
+  <p class="lead">{t('en', 'notfound.text')} <a href={pathFor('en', '')}>{t('en', 'notfound.home')}</a>.</p>
+  <h2 lang="ms">{t('ms', 'notfound.title')}</h2>
+  <p lang="ms">{t('ms', 'notfound.text')} <a href={pathFor('ms', '')}>{t('ms', 'notfound.home')}</a>.</p>
+</Base>
