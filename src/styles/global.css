@@ -400,3 +400,29 @@ main h2 { margin: 2rem 0 0.75rem; font-size: 1.4rem; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Question pages: ranked lists */
+.asat-line { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.95rem; }
+.ref-line { margin: 0 0 0.75rem; color: var(--muted); }
+.ranked-section { margin-top: 1.75rem; }
+.ranked-section h2 { margin: 0 0 0.5rem; }
+.ends { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 40rem) {
+  .ends { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.ranked { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.ranked caption { text-align: left; padding: 0.4rem 0; font-weight: 700; color: var(--heading); }
+.ranked th, .ranked td { padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+.ranked thead th { background: var(--bg); color: var(--heading); font-size: 0.95rem; }
+.ranked .rank { width: 3.5rem; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 400; }
+.ranked .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ranked td.num { min-width: 6.5rem; }
+.ranked .place-name { display: block; font-weight: 700; color: var(--heading); }
+.ranked .place-state { display: block; color: var(--muted); font-size: 0.92rem; }
+.ranked .num-text { display: block; font-weight: 700; color: var(--heading); }
+.ranked .bar { display: block; height: 0.4rem; margin-top: 0.25rem; margin-left: auto; width: var(--w); max-width: 100%; background: var(--s1); border-radius: 0.2rem; }
+.left-out { margin-top: 1.5rem; color: var(--muted); font-size: 0.95rem; }
+.left-out p { margin: 0.25rem 0; }
+.ends > div { min-width: 0; }
+.ranked thead th.num { white-space: normal; }
+.ranked thead th.num { max-width: 9rem; }

@@ -12,8 +12,12 @@ interface Props {
   /** Short cautions */
   keep: string[];
   sourceUrl: string;
+  /** When a page uses more than one dataset: every dataset, linked (the first one is also the data.gov.my link) */
+  sources?: { name: string; url: string }[];
+  /** The heading above the how-to line: "chart" (default) or "list" for pages that hold ranked lists */
+  howtoFor?: 'chart' | 'list';
 }
-const { lang, counted, howto, keep, sourceUrl } = Astro.props;
+const { lang, counted, howto, keep, sourceUrl, sources, howtoFor = 'chart' } = Astro.props;
 // "Data from data.gov.my, licensed CC BY 4.0." with data.gov.my made into a link to the dataset page.
 const [before, after] = t(lang, 'footer.data').split('data.gov.my');
 ---
@@ -25,7 +29,7 @@ const [before, after] = t(lang, 'footer.data').split('data.gov.my');
     <p>{counted}</p>
     {howto && (
       <>
-        <h4>{t(lang, 'meaning.howto')}</h4>
+        <h4>{t(lang, howtoFor === 'list' ? 'meaning.howto.list' : 'meaning.howto')}</h4>
         <p>{howto}</p>
       </>
     )}
@@ -36,5 +40,11 @@ const [before, after] = t(lang, 'footer.data').split('data.gov.my');
     <p class="meaning-source">
       {t(lang, 'source.label')}: {t(lang, 'source.moe')}. {before}<a href={sourceUrl}>data.gov.my</a>{after}
     </p>
+    {sources && sources.length > 1 && (
+      <p class="meaning-source">
+        {t(lang, 'source.datasets')}:{' '}
+        {sources.map((s, i) => (<>{i > 0 && ', '}<a href={s.url}>{s.name}</a></>))}
+      </p>
+    )}
   </div>
 </details>

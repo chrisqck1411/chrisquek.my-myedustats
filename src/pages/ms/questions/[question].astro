@@ -1,0 +1,11 @@
+---
+import QuestionPage from '../../../components/QuestionPage.astro';
+import { buildQuestion, QUESTION_IDS, type QuestionId } from '../../../lib/questions';
+
+export function getStaticPaths() {
+  return QUESTION_IDS.map((id) => ({ params: { question: id } }));
+}
+const id = Astro.params.question as QuestionId;
+---
+
+<QuestionPage lang="ms" path={`questions/${id}/`} question={buildQuestion(id, 'ms')} />
