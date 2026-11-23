@@ -202,6 +202,7 @@
           "tier": 2,
           "label": "Ministry of Education: Malaysia Education Blueprint Annual Report 2013",
           "url": "https://pppm.moe.gov.my/dokumen/27-lt2013-en/file",
+          "lang": "en",
           "quote": "English language literacy screening was implemented for Year 1 students"
         },
         {
@@ -209,6 +210,7 @@
           "tier": 2,
           "label": "Ministry of Education: Education Direction (English)",
           "url": "https://www.moe.gov.my/en/dasarmenu/hala-tuju-pendidikan",
+          "lang": "en",
           "quote": "in year 1 to year 6 of all primary schools"
         },
         {
@@ -216,6 +218,7 @@
           "tier": 1,
           "label": "OpenDOSM dataset page (English): enrolment_school_district",
           "url": "https://open.dosm.gov.my/data-catalogue/enrolment_school_district",
+          "lang": "en",
           "quote": "primary (Standards 1 to 6)"
         }
       ],

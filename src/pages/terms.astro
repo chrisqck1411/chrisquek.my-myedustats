@@ -61,7 +61,7 @@ const groups = order
         {t.evidence && (
           <ul class="term-sources">
             {t.evidence.map((e) => (
-              <li>{e.point} <a href={e.url}>{e.label}</a> (tier {e.tier}): <span lang="ms">“{e.quote}”</span></li>
+              <li>{e.point} <a href={e.url}>{e.label}</a> (tier {e.tier}): <span lang={e.lang ?? 'ms'}>“{e.quote}”</span></li>
             ))}
           </ul>
         )}
@@ -91,6 +91,16 @@ const groups = order
               <li><a href={s.url}>{s.label}</a> (tier {s.tier}): <span lang="ms">“{s.quote}”</span></li>
             ))}
           </ul>
+          {t.decision && t.evidence && (
+            <>
+              <p class="term-note">Other evidence:</p>
+              <ul class="term-sources">
+                {t.evidence.map((e) => (
+                  <li>{e.point} <a href={e.url}>{e.label}</a> (tier {e.tier}): <span lang={e.lang ?? 'ms'}>“{e.quote}”</span></li>
+                ))}
+              </ul>
+            </>
+          )}
         </article>
       ))}
     </section>
