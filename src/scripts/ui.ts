@@ -43,7 +43,19 @@ themeButton?.addEventListener('click', () => {
 });
 syncThemeButton();
 
-/* Role (only remembered for now; it starts changing the page in a later slice) */
+/* Mascot: one picture per role, swapped when the role changes. */
+const mascot = document.getElementById('mascot') as HTMLImageElement | null;
+
+function syncMascot(select: HTMLSelectElement): void {
+  if (!mascot) return;
+  const role = select.value;
+  mascot.src = `/mascot/${role}.webp`;
+  const base = mascot.dataset.alt ?? '';
+  const label = select.options[select.selectedIndex]?.text ?? '';
+  mascot.alt = role === 'default' ? base : `${base} (${label})`;
+}
+
+/* Role (remembered on this device; it changes the mascot, and more in a later slice) */
 const roleSelect = document.getElementById('role') as HTMLSelectElement | null;
 if (roleSelect) {
   const saved = read(ROLE_KEY);
@@ -51,8 +63,10 @@ if (roleSelect) {
     roleSelect.value = saved;
   }
   root.dataset.role = roleSelect.value;
+  syncMascot(roleSelect);
   roleSelect.addEventListener('change', () => {
     write(ROLE_KEY, roleSelect.value);
     root.dataset.role = roleSelect.value;
+    syncMascot(roleSelect);
   });
 }
