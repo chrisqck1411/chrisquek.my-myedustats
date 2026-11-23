@@ -31,5 +31,5 @@ if (errors.length > 0) {
   console.error('terms check FAILED:\n' + errors.map((e) => ' - ' + e).join('\n'));
   process.exit(1);
 }
-const sourced = register.terms.filter((t) => t.status === 'sourced').length;
-console.log(`terms check passed (${sourced} sourced, ${warnings.length} flagged).`);
+const count = (status) => register.terms.filter((t) => t.status === status).length;
+console.log(`terms check passed (${count('sourced')} sourced, ${count('owner-approved')} owner-approved, ${warnings.length} flagged).`);

@@ -6,11 +6,13 @@ import register from '../content/terms.json';
 // It will be replaced by the public bilingual glossary in the last slice.
 const terms = register.terms;
 const flagged = terms.filter((t) => t.status === 'flagged');
-const needsChoice = terms.filter((t) => t.status === 'sourced' && (t.alternatives?.length ?? 0) > 0);
+const approved = terms.filter((t) => t.status === 'owner-approved');
+const needsChoice = terms.filter((t) => t.status === 'sourced' && (t.alternatives?.length ?? 0) > 0 && !t.decision);
 const sourced = terms.filter((t) => t.status === 'sourced');
 
 const categoryNames: Record<string, string> = {
   role: 'Header role names',
+  it: 'Interface wording (IT terms, amanz.my reference)',
   stage: 'Education stages',
   institution: 'Schools and institutions',
   measure: 'Measures',
@@ -21,7 +23,7 @@ const categoryNames: Record<string, string> = {
 };
 const order = Object.keys(categoryNames);
 const groups = order
-  .map((key) => ({ key, name: categoryNames[key], items: sourced.filter((t) => t.category === key) }))
+  .map((key) => ({ key, name: categoryNames[key], items: [...sourced, ...approved].filter((t) => t.category === key) }))
   .filter((g) => g.items.length > 0);
 ---
 
@@ -29,9 +31,9 @@ const groups = order
   <h1>Terminology register</h1>
   <p class="lead">
     Review page for Chris. Every Bahasa Melayu term used on the site, with the official source it comes from.
-    Tier 1 is the dataset's own Malay page, tier 2 is Ministry of Education or DOSM, tier 3 is the DBP dictionary.
+    Tier 1 is the dataset's own Malay page, tier 2 is Ministry of Education or DOSM, tier 3 is the DBP dictionary, tier 4 is amanz.my (IT terms only).
   </p>
-  <p class="term-meta">{sourced.length} sourced, {flagged.length} flagged, {needsChoice.length} with an alternative to choose from. Register updated {register.updated}.</p>
+  <p class="term-meta">{sourced.length} sourced, {approved.length} approved by you without a source, {flagged.length} flagged, {needsChoice.length} waiting for your choice. Register updated {register.updated}.</p>
 
   <section aria-labelledby="flagged-h">
     <h2 id="flagged-h">Needs your decision</h2>
@@ -56,6 +58,13 @@ const groups = order
           ))}
         </ul>
         {t.note && <p>{t.note}</p>}
+        {t.evidence && (
+          <ul class="term-sources">
+            {t.evidence.map((e) => (
+              <li>{e.point} <a href={e.url}>{e.label}</a> (tier {e.tier}): <span lang="ms">“{e.quote}”</span></li>
+            ))}
+          </ul>
+        )}
       </article>
     ))}
   </section>
@@ -71,7 +80,12 @@ const groups = order
             <span class="term-ms" lang="ms">{t.ms}</span>
           </h3>
           {t.definition_ms && <p class="term-def" lang="ms">{t.definition_ms}</p>}
+          {t.status === 'owner-approved' && <p class="term-note">Approved by {t.approved_by} on {t.approved_on}, no official source.</p>}
+          {t.decision && <p class="term-note">Decision: {t.decision.by} chose <strong lang="ms">{t.decision.choice}</strong> on {t.decision.on}.</p>}
           {t.note && <p class="term-note">{t.note}</p>}
+          {t.decision && t.alternatives && (
+            <p class="term-note">Not chosen: {t.alternatives.map((a) => a.ms).join(', ')}.</p>
+          )}
           <ul class="term-sources">
             {t.sources.map((s) => (
               <li><a href={s.url}>{s.label}</a> (tier {s.tier}): <span lang="ms">“{s.quote}”</span></li>

@@ -82,3 +82,32 @@ test('the real register and real data pass', () => {
   });
   assert.deepEqual(result.errors, []);
 });
+
+test('owner-approved terms need who and when, and no source', () => {
+  const t = { id: 'x', category: 'role', en: 'Just browsing', ms: 'Sekadar melayari', status: 'owner-approved', approved_by: 'Chris', approved_on: '2026-11-23', note: 'Approved.' };
+  assert.deepEqual(run([t]).errors, []);
+  assert.match(run([{ ...t, approved_by: undefined }]).errors.join('\n'), /approved_by and approved_on/);
+  assert.match(run([{ ...t, ms: '' }]).errors.join('\n'), /no BM text/);
+});
+
+test('tier 4 (amanz.my) is only allowed for IT terms', () => {
+  const amanz = src({ tier: 4, url: 'https://amanz.my/2019216403/', quote: 'mod gelap' });
+  assert.deepEqual(run([term({ category: 'it', ms: 'Mod gelap', sources: [amanz] })]).errors, []);
+  assert.match(run([term({ category: 'person', ms: 'Mod gelap', sources: [amanz] })]).errors.join('\n'), /only allowed for category "it"/);
+  assert.match(checkSource(src({ tier: 4, url: 'https://example.com/x' }), null).join(), /unexpected host/);
+});
+
+test('a decision must match the term and name a listed wording', () => {
+  const alt = { ms: 'Murid', note: 'Ministry wording', sources: [src({ quote: 'murid' })] };
+  const d = (choice) => ({ by: 'Chris', on: '2026-11-23', choice });
+  assert.deepEqual(run([term({ ms: 'Guru', alternatives: [alt], decision: d('Guru') })]).errors, []);
+  assert.match(run([term({ alternatives: [alt], decision: d('Cikgu') })]).errors.join('\n'), /not one of the wordings/);
+  assert.match(run([term({ alternatives: [alt], decision: d('Murid') })]).errors.join('\n'), /swap them/);
+});
+
+test('ui_contains checks a term inside a longer UI phrase', () => {
+  const t = term({ ms: 'Mod gelap', en: 'Dark mode', sources: [src({ quote: 'mod gelap' })], ui_contains: ['theme.toDark'] });
+  const ok = { en: { 'theme.toDark': 'Switch to dark mode' }, ms: { 'theme.toDark': 'Tukar ke mod gelap' } };
+  assert.deepEqual(run([t], ok).errors, []);
+  assert.match(run([t], { ...ok, ms: { 'theme.toDark': 'Tukar ke tema' } }).errors.join('\n'), /does not contain/);
+});

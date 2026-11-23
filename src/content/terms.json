@@ -9,7 +9,7 @@
       "en": "Primary",
       "ms": "Rendah",
       "definition_en": "Standards 1 to 6",
-      "definition_ms": "Darjah 1 hingga 6",
+      "definition_ms": "Tahun 1 hingga 6",
       "data_values": [
         {
           "field": "stage",
@@ -145,7 +145,7 @@
       "category": "stage",
       "en": "Education stage",
       "ms": "Tahap pendidikan",
-      "note": "The official sources use two labels for the same column: \"Tahap Pendidikan\" (variable table of the dataset pages) and \"Peringkat Pendidikan\" (chart labels of the same datasets). Chris to pick one for the whole site.",
+      "note": "The dataset pages use both labels for the same column (\"Tahap Pendidikan\" in the variable table, \"Peringkat Pendidikan\" on chart labels). They are not interchangeable in Ministry of Education Bahasa Melayu: \"Peringkat\" names the stages themselves (prasekolah, rendah, menengah, lepas menengah) and also levels of government (peringkat negeri, daerah), while \"Tahap\" has the fixed Tahap 1 / Tahap 2 meaning inside primary school. Claude recommends \"Peringkat pendidikan\". Chris to decide.",
       "alternatives": [
         {
           "ms": "Peringkat pendidikan",
@@ -156,6 +156,12 @@
               "label": "OpenDOSM dataset metadata (BM chart labels): enrolment_school_district",
               "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
               "quote": "Peringkat Pendidikan"
+            },
+            {
+              "tier": 2,
+              "label": "Ministry of Education: National Education Policy book, 4th edition",
+              "url": "https://www.moe.gov.my/storage/files/shares/Dasar/Dasar%20Pendidikan%20Kebangsaan/Dasar%20Pendidikan%20Kebangsaan%20Edisi%20Keempat.pdf",
+              "quote": "Peringkat pendidikan di Malaysia adalah daripada peringkat prasekolah"
             }
           ]
         }
@@ -167,37 +173,57 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
           "quote": "Tahap Pendidikan"
         }
+      ],
+      "evidence": [
+        {
+          "point": "In Ministry of Education usage \"Tahap\" is also a fixed name for half of primary school: Tahap 1 is Years 1 to 3, Tahap 2 is Years 4 to 6. It also means a mastery level.",
+          "tier": 2,
+          "label": "Ministry of Education: school-based assessment guide 2025",
+          "url": "https://www.moe.gov.my/storage/files/shares/pekeliling_dan_garis_panduan/Panduan%20Pengurusan%20PBS%20Edisi%201%20Tahun%202025.pdf",
+          "quote": "Murid Tahap 1 (Tahun 1, Tahun 2 dan Tahun 3)"
+        }
       ]
     },
     {
       "status": "sourced",
-      "id": "standard-darjah",
+      "id": "primary-year",
       "category": "stage",
       "en": "Standard (primary year group)",
-      "ms": "Darjah",
-      "note": "The datasets say \"Darjah 1 hingga 6\". Newer Ministry of Education pages say \"Tahun 1\" for the same year group.",
+      "ms": "Tahun",
+      "note": "Chris chose the newer Ministry of Education wording. The datasets still say \"Darjah\".",
       "alternatives": [
         {
-          "ms": "Tahun",
-          "note": "Ministry of Education wording for the first year of primary school.",
+          "ms": "Darjah",
+          "note": "Wording used in the OpenDOSM dataset descriptions.",
           "sources": [
             {
-              "tier": 2,
-              "label": "Ministry of Education: deferral to Year 1",
-              "url": "https://www.moe.gov.my/dasar-pengoperasian-pengecualian-daripada-mengikuti-pendidikan-wajib-penangguhan-ke-tahun-1",
-              "quote": "Penangguhan Ke Tahun 1"
+              "tier": 1,
+              "label": "OpenDOSM dataset page (BM): enrolment_school_district",
+              "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
+              "quote": "pendidikan rendah (Darjah 1 hingga 6)"
             }
           ]
         }
       ],
       "sources": [
         {
-          "tier": 1,
-          "label": "OpenDOSM dataset page (BM): enrolment_school_district",
-          "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
-          "quote": "pendidikan rendah (Darjah 1 hingga 6)"
+          "tier": 2,
+          "label": "Ministry of Education: end-of-session test guide 2024/2025",
+          "url": "https://www.moe.gov.my/storage/files/shares/pentaksiran-berasaskan-sekolah/5.%20Panduan%20Pengurusan%20dan%20Pentadbiran%20UASA%20&%20FAQ%20UASA.pdf",
+          "quote": "murid Tahun 4 hingga Tahun 6 di sekolah rendah"
+        },
+        {
+          "tier": 2,
+          "label": "Ministry of Education: deferral to Year 1",
+          "url": "https://www.moe.gov.my/dasar-pengoperasian-pengecualian-daripada-mengikuti-pendidikan-wajib-penangguhan-ke-tahun-1",
+          "quote": "Penangguhan Ke Tahun 1"
         }
-      ]
+      ],
+      "decision": {
+        "by": "Chris",
+        "on": "2026-11-23",
+        "choice": "Tahun"
+      }
     },
     {
       "status": "sourced",
@@ -474,7 +500,12 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
           "quote": "Bilangan Pelajar"
         }
-      ]
+      ],
+      "decision": {
+        "by": "Chris",
+        "on": "2026-11-23",
+        "choice": "Bilangan pelajar"
+      }
     },
     {
       "status": "sourced",
@@ -1050,7 +1081,7 @@
       "en": "Policymaker",
       "ms": "Penggubal dasar",
       "ui_key": "role.policymaker",
-      "note": "Both \"penggubal dasar\" and \"pembuat dasar\" are used officially (see alternative). DBP defines \"penggubal\" as someone who drafts laws or terms, which is narrower. Chris to choose; the site currently uses \"Penggubal dasar\".",
+      "note": "\"Penggubal dasar\" is used by the Ministry of Education and DOSM. \"Pembuat dasar\" is also used by DOSM. DBP defines \"penggubal\" as someone who drafts laws or terms, which is narrower.",
       "alternatives": [
         {
           "ms": "Pembuat dasar",
@@ -1078,7 +1109,12 @@
           "url": "https://www.moe.gov.my/storage/files/shares/Dasar/Dasar%20Pendidikan%20Kebangsaan/Dasar%20Pendidikan%20Kebangsaan%20Edisi%20Keempat.pdf",
           "quote": "KPM sebagai penggubal dasar pendidikan"
         }
-      ]
+      ],
+      "decision": {
+        "by": "Chris",
+        "on": "2026-11-23",
+        "choice": "Penggubal dasar"
+      }
     },
     {
       "status": "sourced",
@@ -1100,12 +1136,51 @@
       "id": "role-default",
       "category": "role",
       "en": "Just browsing",
-      "ms": null,
-      "ms_draft": "Sekadar melayari",
+      "ms": "Sekadar melayari",
       "ui_key": "role.default",
-      "status": "flagged",
-      "note": "No official source found for this wording. It is a plain-language phrase, not an education term, so Chris should confirm by eye or choose another phrase. The PRPM lookup for \"melayari\" did not return a usable page.",
-      "sources": []
+      "status": "owner-approved",
+      "note": "Plain-language interface phrase with no official source. Approved by Chris on 23 Nov 2026.",
+      "sources": [],
+      "approved_by": "Chris",
+      "approved_on": "2026-11-23"
+    },
+    {
+      "id": "dark-mode",
+      "category": "it",
+      "en": "Dark mode",
+      "ms": "Mod gelap",
+      "status": "sourced",
+      "ui_contains": [
+        "theme.toDark"
+      ],
+      "note": "IT term. Reference: amanz.my (Malaysian technology news site), not an official body.",
+      "sources": [
+        {
+          "tier": 4,
+          "label": "amanz.my: 10 Perkara Menarik Dalam Android 10",
+          "url": "https://amanz.my/2019216403/",
+          "quote": "Antara yang paling menarik adalah mod gelap."
+        }
+      ]
+    },
+    {
+      "id": "light-mode",
+      "category": "it",
+      "en": "Light mode",
+      "ms": "Mod cerah",
+      "status": "sourced",
+      "ui_contains": [
+        "theme.toLight"
+      ],
+      "note": "IT term. Reference: amanz.my. The same site also writes \"mod terang\" in other articles.",
+      "sources": [
+        {
+          "tier": 4,
+          "label": "amanz.my: 12 Perkara Menarik Dalam Android 12",
+          "url": "https://amanz.my/2021273526",
+          "quote": "jika mod cerah ia akan menjadi kebiru-biruan dan mod gelap"
+        }
+      ]
     }
   ]
 }
