@@ -8,7 +8,7 @@
       "category": "stage",
       "en": "Primary",
       "ms": "Rendah",
-      "definition_en": "Standards 1 to 6",
+      "definition_en": "Year 1 to 6",
       "definition_ms": "Tahun 1 hingga 6",
       "data_values": [
         {
@@ -193,9 +193,32 @@
       "status": "sourced",
       "id": "primary-year",
       "category": "stage",
-      "en": "Standard (primary year group)",
+      "en": "Year (primary year group)",
       "ms": "Tahun",
-      "note": "Chris chose the newer Ministry of Education wording. The datasets still say \"Darjah\".",
+      "note": "Chris chose the newer Ministry of Education wording in both languages (23 Nov 2026). In English the Ministry writes \"Year 1\" to \"Year 6\"; \"Standard 1\" to \"Standard 6\" is the older wording, still used by the OpenDOSM English dataset page. The datasets' Malay pages still say \"Darjah\".",
+      "evidence": [
+        {
+          "point": "Ministry of Education English wording: primary year groups are \"Year 1\" to \"Year 6\" (Malaysia Education Blueprint Annual Report 2013).",
+          "tier": 2,
+          "label": "Ministry of Education: Malaysia Education Blueprint Annual Report 2013",
+          "url": "https://pppm.moe.gov.my/dokumen/27-lt2013-en/file",
+          "quote": "English language literacy screening was implemented for Year 1 students"
+        },
+        {
+          "point": "The Ministry's English \"Education Direction\" page writes \"year 1 to year 6\" from its 1989 entry; \"Standard\" appears there only in entries from 1967 to 1973.",
+          "tier": 2,
+          "label": "Ministry of Education: Education Direction (English)",
+          "url": "https://www.moe.gov.my/en/dasarmenu/hala-tuju-pendidikan",
+          "quote": "in year 1 to year 6 of all primary schools"
+        },
+        {
+          "point": "The older English wording \"Standards 1 to 6\", still on the OpenDOSM English dataset page (checked 23 Nov 2026). Not used on this site.",
+          "tier": 1,
+          "label": "OpenDOSM dataset page (English): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/data-catalogue/enrolment_school_district",
+          "quote": "primary (Standards 1 to 6)"
+        }
+      ],
       "alternatives": [
         {
           "ms": "Darjah",
