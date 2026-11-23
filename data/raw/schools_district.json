@@ -10,7 +10,7 @@
  "next_update": "2027-12-31 18:00",
  "update_frequency": "YEARLY",
  "row_count": 4514,
- "fetched_at": "2026-11-23T03:36:09.554Z",
+ "fetched_at": "2026-11-23T04:13:38.489Z",
  "columns": ["date","state","district","stage","type","schools"],
  "rows": [
 {"date":"2017-01-01","state":"Johor","district":"All Districts","stage":"primary","type":"Sekolah Rendah Kerajaan","schools":906,"level":"state","state_key":"johor","district_key":null,"flags":[]},
