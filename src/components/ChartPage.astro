@@ -1,0 +1,56 @@
+---
+// One chart page: the chart, the plain-language note, the "What does this mean?" panel, the data table and the source.
+// The chart is drawn in the browser by src/scripts/chart.ts; the note, the panel and the table are plain HTML,
+// so a visitor with no script, a screen reader or a slow connection still gets every number and its meaning.
+import Base from '../layouts/Base.astro';
+import MeaningPanel from './MeaningPanel.astro';
+import { t, pathFor, type Lang } from '../i18n';
+import type { Chart } from '../lib/glance';
+
+interface Props {
+  lang: Lang;
+  /** Page path without language prefix, e.g. "charts/students/" */
+  path: string;
+  chart: Chart;
+}
+const { lang, path, chart } = Astro.props;
+const payload = JSON.stringify({ lang, lines: chart.lines, asAtByTime: chart.asAtByTime });
+---
+
+<Base lang={lang} path={path} title={chart.title}>
+  <p class="crumb"><a href={pathFor(lang, '#glance')}>{t(lang, 'glance.title')}</a></p>
+  <h1>{chart.title}</h1>
+  <figure class="chart-figure">
+    <div class="chart" data-chart role="img" aria-label={`${chart.title}. ${chart.note}`}></div>
+    <script type="application/json" data-chart-data set:html={payload} />
+  </figure>
+  <p class="chart-note">{chart.note}</p>
+  <MeaningPanel lang={lang} counted={chart.counted} howto={chart.howto} keep={chart.keep} sourceUrl={chart.sourceUrl} />
+  <details class="datatable">
+    <summary>
+      <span class="when-closed">{t(lang, 'table.show')}</span>
+      <span class="when-open">{t(lang, 'table.hide')}</span>
+    </summary>
+    <div class="table-wrap">
+      <table>
+        <caption>{chart.title}</caption>
+        <thead>
+          <tr>
+            {chart.tableHead.map((h) => <th scope="col">{h}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {chart.tableRows.map((row) => (
+            <tr>
+              <th scope="row">{row.label}</th>
+              {row.cells.map((c) => <td>{c}</td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </details>
+  <script>
+    import '../scripts/chart';
+  </script>
+</Base>

@@ -1,0 +1,40 @@
+---
+// The "What does this mean?" panel under every headline card and every chart.
+// A native <details> element: it opens and closes without any script, with the keyboard, and for screen readers.
+import { t, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+  /** What is counted: the dataset's own definition */
+  counted: string;
+  /** How to read the chart (charts only) */
+  howto?: string;
+  /** Short cautions */
+  keep: string[];
+  sourceUrl: string;
+}
+const { lang, counted, howto, keep, sourceUrl } = Astro.props;
+// "Data from data.gov.my, licensed CC BY 4.0." with data.gov.my made into a link to the dataset page.
+const [before, after] = t(lang, 'footer.data').split('data.gov.my');
+---
+
+<details class="meaning">
+  <summary>{t(lang, 'meaning.button')}</summary>
+  <div class="meaning-body">
+    <h4>{t(lang, 'meaning.counted')}</h4>
+    <p>{counted}</p>
+    {howto && (
+      <>
+        <h4>{t(lang, 'meaning.howto')}</h4>
+        <p>{howto}</p>
+      </>
+    )}
+    <h4>{t(lang, 'meaning.keep')}</h4>
+    <ul>
+      {keep.map((line) => <li>{line}</li>)}
+    </ul>
+    <p class="meaning-source">
+      {t(lang, 'source.label')}: {t(lang, 'source.moe')}. {before}<a href={sourceUrl}>data.gov.my</a>{after}
+    </p>
+  </div>
+</details>
