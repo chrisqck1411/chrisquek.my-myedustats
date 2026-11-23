@@ -22,5 +22,7 @@
   "notfound.title": "Halaman tidak ditemui",
   "notfound.text": "Halaman ini tidak wujud atau telah dipindahkan.",
   "notfound.home": "Pergi ke halaman utama",
-  "quote.source": "Sumber"
+  "notfound.choose": "Pilih bahasa anda",
+  "quote.source": "Sumber",
+  "quote.translation": "Terjemahan"
 }

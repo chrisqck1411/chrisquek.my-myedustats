@@ -1,21 +1,50 @@
 ---
 import Base from '../layouts/Base.astro';
 import { t, pathFor } from '../i18n';
+import { FEEDBACK_EMAIL } from '../config';
 import register from '../content/quotes.json';
 
 const { quotes, fallback } = register;
+const title = `${t('en', 'notfound.title')} · ${t('ms', 'notfound.title')}`;
 ---
 
-<!-- Shown for any address that does not exist. It is served at the address that was asked for,
-     so it cannot know the visitor's language and shows both. The message and home links stay on
-     top; below them the tapir shows one education quote (src/content/quotes.json, every quote has
-     a source link). All quotes are in the page; only the fallback shows if the script does not run,
-     and src/scripts/quote.ts then shows a different one on each visit. -->
-<Base lang="en" path="" title={t('en', 'notfound.title')} noindex singleLanguage>
-  <h1>{t('en', 'notfound.title')}</h1>
-  <p class="lead">{t('en', 'notfound.text')} <a href={pathFor('en', '')}>{t('en', 'notfound.home')}</a>.</p>
-  <h2 lang="ms">{t('ms', 'notfound.title')}</h2>
-  <p lang="ms">{t('ms', 'notfound.text')} <a href={pathFor('ms', '')}>{t('ms', 'notfound.home')}</a>.</p>
+<!-- Shown for any address that does not exist. It is served at the address that was asked for, so
+     the server cannot know the visitor's language. Instead the page holds every view and each part
+     says which view it belongs to with data-v ("en", "ms", "choose"). public/lang-init.js picks "en"
+     or "ms" before the page is drawn (address prefix, then remembered choice, then browser language)
+     and sets html[data-nf]. Without scripts there is no data-nf and only the "choose" parts show:
+     a short language chooser, never two full pages. Below the message the tapir shows one education
+     quote (src/content/quotes.json, every quote has a source link). All quotes are in the page; only
+     the fallback shows if scripts do not run, and src/scripts/quote.ts shows a different one on each visit. -->
+<Base lang="en" path="" title={title} noindex singleLanguage notFound>
+  <section data-v="choose" class="nf-choose">
+    <h1>
+      <span lang="en">{t('en', 'notfound.title')}</span>
+      <span class="nf-dot" aria-hidden="true">·</span>
+      <span lang="ms">{t('ms', 'notfound.title')}</span>
+    </h1>
+    <p class="lead">
+      <span lang="en">{t('en', 'notfound.choose')}</span>
+      <span class="nf-dot" aria-hidden="true">·</span>
+      <span lang="ms">{t('ms', 'notfound.choose')}</span>
+    </p>
+    <p class="nf-choices">
+      <a class="nf-button" href={pathFor('en', '')} hreflang="en" lang="en" data-set-lang="en">{t('ms', 'lang.switch')}</a>
+      <a class="nf-button" href={pathFor('ms', '')} hreflang="ms" lang="ms" data-set-lang="ms">{t('en', 'lang.switch')}</a>
+    </p>
+  </section>
+
+  <section data-v="en" lang="en">
+    <h1>{t('en', 'notfound.title')}</h1>
+    <p class="lead">{t('en', 'notfound.text')} <a href={pathFor('en', '')}>{t('en', 'notfound.home')}</a>.</p>
+    <p class="nf-other"><a href={pathFor('ms', '')} hreflang="ms" lang="ms" data-set-lang="ms">{t('en', 'lang.switch')}</a></p>
+  </section>
+
+  <section data-v="ms" lang="ms">
+    <h1>{t('ms', 'notfound.title')}</h1>
+    <p class="lead">{t('ms', 'notfound.text')} <a href={pathFor('ms', '')}>{t('ms', 'notfound.home')}</a>.</p>
+    <p class="nf-other"><a href={pathFor('en', '')} hreflang="en" lang="en" data-set-lang="en">{t('ms', 'lang.switch')}</a></p>
+  </section>
 
   <div class="hero notfound-quote">
     <div class="hero-mascot">
@@ -38,11 +67,16 @@ const { quotes, fallback } = register;
               {q.translation && (
                 <span>
                   {' '}
-                  Translation: {q.translation.translator} ({q.translation.year}).
+                  <span data-v="choose">{t('en', 'quote.translation')} / {t('ms', 'quote.translation')}:</span>
+                  <span data-v="en">{t('en', 'quote.translation')}:</span>
+                  <span data-v="ms">{t('ms', 'quote.translation')}:</span>{' '}
+                  {q.translation.translator} ({q.translation.year}).
                 </span>
               )}{' '}
               <a href={q.sourceUrl} rel="noopener noreferrer">
-                {t('en', 'quote.source')} / {t('ms', 'quote.source')}
+                <span data-v="choose">{t('en', 'quote.source')} / {t('ms', 'quote.source')}</span>
+                <span data-v="en">{t('en', 'quote.source')}</span>
+                <span data-v="ms">{t('ms', 'quote.source')}</span>
               </a>
             </figcaption>
           </figure>
@@ -50,6 +84,25 @@ const { quotes, fallback } = register;
       }
     </div>
   </div>
+
+  <Fragment slot="footer">
+    <footer class="site-footer">
+      <div class="wrap">
+        {
+          (['en', 'ms'] as const).map((l) => (
+            <div data-v={l === 'en' ? 'en choose' : 'ms choose'} lang={l} class="nf-foot">
+              <p>{t(l, 'footer.data')}</p>
+              <p>{t(l, 'footer.unofficial')}</p>
+              <p>
+                {t(l, 'footer.feedback')}: <a href={`mailto:${FEEDBACK_EMAIL}`}>{FEEDBACK_EMAIL}</a>
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </footer>
+  </Fragment>
+
   <script>
     import '../scripts/quote.ts';
   </script>

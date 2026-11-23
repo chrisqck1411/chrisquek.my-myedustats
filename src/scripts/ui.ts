@@ -1,7 +1,8 @@
-/* Header behaviour: light/dark switch and role choice. Both are remembered on this device only. */
+/* Header behaviour: light/dark switch, role choice and language choice. All are remembered on this device only. */
 
 const THEME_KEY = 'mes-theme';
 const ROLE_KEY = 'mes-role';
+const LANG_KEY = 'mes-lang';
 
 function read(key: string): string | null {
   try {
@@ -69,4 +70,19 @@ if (roleSelect) {
     root.dataset.role = roleSelect.value;
     syncMascot(roleSelect);
   });
+}
+
+/* Language: remembered only when the visitor presses a language switch (never from just visiting a page),
+   so opening one shared link in another language does not change their preference. */
+for (const link of Array.from(document.querySelectorAll<HTMLAnchorElement>('a[data-set-lang]'))) {
+  link.addEventListener('click', () => {
+    const lang = link.dataset.setLang;
+    if (lang === 'en' || lang === 'ms') write(LANG_KEY, lang);
+  });
+}
+
+/* Page-not-found: the logo leads to the home page in the language the page is showing. */
+if (root.dataset.nf === 'ms') {
+  const home = document.querySelector<HTMLAnchorElement>('a[data-nf-home]');
+  if (home) home.href = '/ms/';
 }

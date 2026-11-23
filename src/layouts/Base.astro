@@ -17,9 +17,11 @@ interface Props {
   noindex?: boolean;
   /** True when the page exists in English only (no BM twin). */
   singleLanguage?: boolean;
+  /** The page-not-found page: language-neutral header, language chosen by public/lang-init.js. */
+  notFound?: boolean;
 }
 
-const { lang, path, title, description, noindex = false, singleLanguage = false } = Astro.props;
+const { lang, path, title, description, noindex = false, singleLanguage = false, notFound = false } = Astro.props;
 const pageTitle = title ? `${title} | ${t(lang, 'site.name')}` : `${t(lang, 'site.name')} | ${t(lang, 'site.tagline')}`;
 const pageDescription = description ?? t(lang, 'site.tagline');
 const canonical = `${SITE_URL}${pathFor(lang, path)}`;
@@ -27,7 +29,7 @@ const hideFromSearch = noindex || !INDEXABLE;
 ---
 
 <!doctype html>
-<html lang={lang} data-role="default">
+<html lang={lang} data-role="default" data-notfound={notFound ? '' : undefined}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -46,16 +48,17 @@ const hideFromSearch = noindex || !INDEXABLE;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="color-scheme" content="light dark" />
     <script is:inline src="/theme-init.js"></script>
+    <script is:inline src="/lang-init.js"></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">{t(lang, 'skip')}</a>
-    <Header lang={lang} path={singleLanguage ? '' : path} />
+    {!notFound && <a class="skip-link" href="#main">{t(lang, 'skip')}</a>}
+    <Header lang={lang} path={singleLanguage ? '' : path} minimal={notFound} />
     <main id="main" tabindex="-1">
       <div class="wrap">
         <slot />
       </div>
     </main>
-    <Footer lang={lang} />
+    <slot name="footer"><Footer lang={lang} /></slot>
     <script>
       import '../scripts/ui';
     </script>

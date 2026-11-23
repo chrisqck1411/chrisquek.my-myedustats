@@ -199,6 +199,33 @@ h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.15; margin: 0 0 0.75r
   .hero-mascot { max-width: 190px; }
 }
 
+/* 404 language views. Each part of the page-not-found page names its view in data-v ("en", "ms",
+   "choose"). public/lang-init.js sets html[data-nf] to "en" or "ms"; without scripts there is no
+   data-nf, so only the "choose" parts (the language chooser) show. */
+:root:not([data-nf]) [data-v]:not([data-v~="choose"]),
+:root[data-nf="en"] [data-v]:not([data-v~="en"]),
+:root[data-nf="ms"] [data-v]:not([data-v~="ms"]) { display: none; }
+.nf-dot { margin: 0 0.35rem; color: var(--muted); }
+.nf-choices { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0; }
+.nf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  min-width: 11rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-contrast);
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+.nf-button:hover { filter: brightness(1.1); }
+.nf-other { margin: 0; }
+.nf-foot + .nf-foot { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+
 /* 404 quote */
 .notfound-quote { margin-top: 2.5rem; }
 .quote { margin: 0; }
@@ -260,6 +287,7 @@ main h2 { margin: 2rem 0 0.75rem; font-size: 1.4rem; }
 
 @media (max-width: 40rem) {
   .controls { width: 100%; flex-wrap: nowrap; }
+  .site-header .wrap:has(.controls > :only-child) .controls { width: auto; }
   .role-field { flex: 1 1 auto; min-width: 0; }
   .role-field span { white-space: nowrap; }
   .role-field select { flex: 1; min-width: 0; }

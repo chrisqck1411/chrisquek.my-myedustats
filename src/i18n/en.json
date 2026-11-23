@@ -22,5 +22,7 @@
   "notfound.title": "Page not found",
   "notfound.text": "This page does not exist or has moved.",
   "notfound.home": "Go to the home page",
-  "quote.source": "Source"
+  "notfound.choose": "Choose your language",
+  "quote.source": "Source",
+  "quote.translation": "Translation"
 }
