@@ -1,14 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
 import GlanceCard from './GlanceCard.astro';
+import QuestionCard from './QuestionCard.astro';
 import { t, type Lang } from '../i18n';
 import { buildCards } from '../lib/glance';
+import { buildQuestion, QUESTION_IDS } from '../lib/questions';
 
 interface Props {
   lang: Lang;
 }
 const { lang } = Astro.props;
 const cards = buildCards(lang);
+const questions = QUESTION_IDS.map((id) => buildQuestion(id, lang));
 ---
 
 <Base lang={lang} path="">
@@ -29,6 +32,13 @@ const cards = buildCards(lang);
       <p class="notice">{t(lang, 'site.status')}</p>
     </div>
   </div>
+  <section class="questions" id="questions" aria-labelledby="questions-title">
+    <h2 id="questions-title">{t(lang, 'home.questions.title')}</h2>
+    <p class="section-lead">{t(lang, 'home.questions.lead')}</p>
+    <div class="card-grid">
+      {questions.map((question) => <QuestionCard lang={lang} question={question} />)}
+    </div>
+  </section>
   <section class="glance" id="glance" aria-labelledby="glance-title">
     <h2 id="glance-title">{t(lang, 'glance.title')}</h2>
     <div class="card-grid">

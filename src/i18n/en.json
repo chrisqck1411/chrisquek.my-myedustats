@@ -110,5 +110,7 @@
   "q.completion.howto": "Each row is one place. A lower rate means fewer students finished upper secondary, compared with the group that started it.",
   "q.completion.keep.small": "Small districts can swing a lot from year to year.",
   "q.completion.keep.offices": "District figures follow the areas of the District Education Offices, so they can differ from the state figures.",
-  "meaning.howto.list": "How to read this list"
+  "meaning.howto.list": "How to read this list",
+  "home.questions.title": "Questions the data can answer",
+  "home.questions.lead": "Each question links to the full ranked list, district by district or state by state."
 }

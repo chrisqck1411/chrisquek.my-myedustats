@@ -110,5 +110,7 @@
   "q.completion.howto": "Setiap baris ialah satu tempat. Kadar yang lebih rendah bermakna lebih sedikit pelajar tamat peringkat menengah atas, berbanding kumpulan yang memulakannya.",
   "q.completion.keep.small": "Daerah kecil boleh berubah dengan ketara dari tahun ke tahun.",
   "q.completion.keep.offices": "Angka daerah mengikut kawasan Pejabat Pendidikan Daerah, jadi ia boleh berbeza daripada angka negeri.",
-  "meaning.howto.list": "Cara membaca senarai ini"
+  "meaning.howto.list": "Cara membaca senarai ini",
+  "home.questions.title": "Soalan yang boleh dijawab oleh data",
+  "home.questions.lead": "Setiap soalan dipautkan ke senarai penuh mengikut kedudukan, daerah demi daerah atau negeri demi negeri."
 }

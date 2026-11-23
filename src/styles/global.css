@@ -426,3 +426,29 @@ main h2 { margin: 2rem 0 0.75rem; font-size: 1.4rem; }
 .ends > div { min-width: 0; }
 .ranked thead th.num { white-space: normal; }
 .ranked thead th.num { max-width: 9rem; }
+
+/* Home page: question cards (top 3 and bottom 3 of each ranked list) */
+.questions { margin-top: 2.5rem; }
+.questions h2 { margin-top: 0; }
+.section-lead { margin: 0.25rem 0 1rem; color: var(--muted); }
+.q-card h3 a { color: var(--heading); text-decoration: none; }
+.q-card h3 a:hover, .q-card h3 a:focus-visible { text-decoration: underline; }
+.q-list { margin-top: 0.4rem; }
+.q-list h4 { margin: 0.5rem 0 0.15rem; font-size: 0.95rem; color: var(--muted); font-weight: 600; }
+.q-rows { list-style: none; margin: 0; padding: 0; }
+.q-rows li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.q-rows li:last-child { border-bottom: 0; }
+.q-place { display: flex; flex-direction: column; min-width: 0; }
+.q-name { font-weight: 700; color: var(--heading); overflow-wrap: anywhere; }
+.q-state { color: var(--muted); font-size: 0.9rem; }
+.q-value { font-size: 1.2rem; font-weight: 700; color: var(--heading); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.q-ref { margin: 0.6rem 0 0.4rem; color: var(--muted); }
+.q-card .card-foot { margin-top: auto; }
+.q-card .meaning { margin-bottom: 0.2rem; }
