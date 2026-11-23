@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { t, pathFor, type Lang } from '../i18n';
+import { INDEXABLE, SITE_URL } from '../config';
+
+interface Props {
+  lang: Lang;
+  /** Page path without language prefix, e.g. "" for the home page. */
+  path: string;
+  title?: string;
+  description?: string;
+  /** Force "noindex" for this page even after go-live (for test pages). */
+  noindex?: boolean;
+  /** True when the page exists in English only (no BM twin). */
+  singleLanguage?: boolean;
+}
+
+const { lang, path, title, description, noindex = false, singleLanguage = false } = Astro.props;
+const pageTitle = title ? `${title} | ${t(lang, 'site.name')}` : `${t(lang, 'site.name')} | ${t(lang, 'site.tagline')}`;
+const pageDescription = description ?? t(lang, 'site.tagline');
+const canonical = `${SITE_URL}${pathFor(lang, path)}`;
+const hideFromSearch = noindex || !INDEXABLE;
+---
+
+<!doctype html>
+<html lang={lang} data-role="default">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    {hideFromSearch && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonical} />
+    {!singleLanguage && (
+      <>
+        <link rel="alternate" hreflang="en" href={`${SITE_URL}${pathFor('en', path)}`} />
+        <link rel="alternate" hreflang="ms" href={`${SITE_URL}${pathFor('ms', path)}`} />
+        <link rel="alternate" hreflang="x-default" href={`${SITE_URL}${pathFor('en', path)}`} />
+      </>
+    )}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline src="/theme-init.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t(lang, 'skip')}</a>
+    <Header lang={lang} path={singleLanguage ? '' : path} />
+    <main id="main" tabindex="-1">
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+    <Footer lang={lang} />
+    <script>
+      import '../scripts/ui';
+    </script>
+  </body>
+</html>

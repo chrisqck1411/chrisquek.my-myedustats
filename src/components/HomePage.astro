@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { t, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<Base lang={lang} path="">
+  <h1>{t(lang, 'site.name')}</h1>
+  <p class="lead">{t(lang, 'site.tagline')}</p>
+  <p class="notice">{t(lang, 'site.status')}</p>
+</Base>
