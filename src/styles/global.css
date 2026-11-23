@@ -14,6 +14,9 @@
   --heading: #0b3d6b;
   --mascot-bg: #e3f0fa;
   --focus: #0b5cab;
+  --s1: #0b5cab;
+  --s2: #b3407b;
+  --s3: #0b7a5e;
   --radius: 14px;
   --max: 68rem;
   --font: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
@@ -32,6 +35,9 @@
   --heading: #e8eff5;
   --mascot-bg: #2b4a66;
   --focus: #79b8ff;
+  --s1: #79b8ff;
+  --s2: #f08fc0;
+  --s3: #4fcfa4;
 }
 
 :root[data-theme="light"] {
@@ -52,6 +58,9 @@
     --heading: #e8eff5;
     --mascot-bg: #2b4a66;
     --focus: #79b8ff;
+    --s1: #79b8ff;
+    --s2: #f08fc0;
+    --s3: #4fcfa4;
   }
 }
 
@@ -283,6 +292,88 @@ main h2 { margin: 2rem 0 0.75rem; font-size: 1.4rem; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+}
+
+/* Home: Malaysia at a glance */
+.glance { margin-top: 3rem; }
+.glance h2 { margin-top: 0; }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem 1.1rem;
+}
+.card h3 { margin: 0; font-size: 1.15rem; line-height: 1.3; }
+.card-asat { margin: 0.15rem 0 0.6rem; color: var(--muted); font-size: 0.95rem; }
+.card-rows { margin: 0 0 0.9rem; }
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.card-row:last-child { border-bottom: 0; }
+.card-row dt { color: var(--muted); }
+.card-row dd { margin: 0; font-size: 1.35rem; font-weight: 700; color: var(--heading); font-variant-numeric: tabular-nums; }
+.card-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 0.4rem; font-weight: 700; }
+
+/* "What does this mean?" panel */
+.meaning { margin: 0.25rem 0; }
+.meaning summary, .datatable summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.2rem 0.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+}
+.meaning summary:hover, .datatable summary:hover { text-decoration: underline; }
+.meaning-body {
+  margin-top: 0.25rem;
+  padding: 0.6rem 0.9rem 0.8rem;
+  background: var(--bg);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.meaning-body h4 { margin: 0.7rem 0 0.15rem; font-size: 0.95rem; color: var(--heading); }
+.meaning-body h4:first-child { margin-top: 0.2rem; }
+.meaning-body p, .meaning-body ul { margin: 0.15rem 0; }
+.meaning-body ul { padding-left: 1.2rem; }
+.meaning-body li { margin: 0.25rem 0; }
+.meaning-source { margin-top: 0.8rem !important; color: var(--muted); font-size: 0.92rem; }
+
+/* Chart page */
+.crumb { margin: 0 0 0.5rem; }
+.chart-figure { margin: 1rem 0 0.5rem; }
+.chart {
+  display: none;
+  width: 100%;
+  height: 22rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.js .chart { display: block; }
+.chart-note { max-width: 44rem; font-size: 1.1rem; margin: 0.75rem 0 1rem; }
+.datatable { margin: 0.25rem 0 1rem; }
+.datatable .when-open, .datatable[open] .when-closed { display: none; }
+.datatable[open] .when-open { display: inline; }
+.table-wrap { overflow-x: auto; margin-top: 0.4rem; }
+.datatable table { border-collapse: collapse; min-width: 100%; max-width: 44rem; background: var(--surface); }
+.datatable caption { text-align: left; padding: 0.4rem 0; color: var(--muted); font-size: 0.95rem; }
+.datatable th, .datatable td { padding: 0.45rem 0.8rem; border: 1px solid var(--border); text-align: right; font-variant-numeric: tabular-nums; }
+.datatable thead th, .datatable tbody th { text-align: left; background: var(--bg); color: var(--heading); }
+@media (max-width: 40rem) {
+  .chart { height: 19rem; }
 }
 
 @media (max-width: 40rem) {

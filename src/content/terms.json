@@ -8,7 +8,7 @@
       "category": "stage",
       "en": "Primary",
       "ms": "Rendah",
-      "definition_en": "Standards 1 to 6",
+      "definition_en": "Year 1 to 6",
       "definition_ms": "Tahun 1 hingga 6",
       "data_values": [
         {
@@ -23,7 +23,8 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
           "quote": "pendidikan rendah (Darjah 1 hingga 6)"
         }
-      ]
+      ],
+      "ui_key": "stage.primary"
     },
     {
       "status": "sourced",
@@ -46,7 +47,8 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
           "quote": "menengah (Tingkatan 1 hingga 5)"
         }
-      ]
+      ],
+      "ui_key": "stage.secondary"
     },
     {
       "status": "sourced",
@@ -69,7 +71,8 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_state",
           "quote": "menengah rendah (Tingkatan 1 hingga 3)"
         }
-      ]
+      ],
+      "ui_key": "stage.lowersecondary"
     },
     {
       "status": "sourced",
@@ -92,7 +95,8 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_state",
           "quote": "menengah atas (Tingkatan 4 hingga 5)"
         }
-      ]
+      ],
+      "ui_key": "stage.uppersecondary"
     },
     {
       "status": "sourced",
@@ -115,7 +119,8 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
           "quote": "pasca menengah (Tingkatan 6)"
         }
-      ]
+      ],
+      "ui_key": "stage.postsecondary"
     },
     {
       "status": "sourced",
@@ -193,9 +198,35 @@
       "status": "sourced",
       "id": "primary-year",
       "category": "stage",
-      "en": "Standard (primary year group)",
+      "en": "Year (primary year group)",
       "ms": "Tahun",
-      "note": "Chris chose the newer Ministry of Education wording. The datasets still say \"Darjah\".",
+      "note": "Chris chose the newer Ministry of Education wording in both languages (23 Nov 2026). In English the Ministry writes \"Year 1\" to \"Year 6\"; \"Standard 1\" to \"Standard 6\" is the older wording, still used by the OpenDOSM English dataset page. The datasets' Malay pages still say \"Darjah\".",
+      "evidence": [
+        {
+          "point": "Ministry of Education English wording: primary year groups are \"Year 1\" to \"Year 6\" (Malaysia Education Blueprint Annual Report 2013).",
+          "tier": 2,
+          "label": "Ministry of Education: Malaysia Education Blueprint Annual Report 2013",
+          "url": "https://pppm.moe.gov.my/dokumen/27-lt2013-en/file",
+          "lang": "en",
+          "quote": "English language literacy screening was implemented for Year 1 students"
+        },
+        {
+          "point": "The Ministry's English \"Education Direction\" page writes \"year 1 to year 6\" from its 1989 entry; \"Standard\" appears there only in entries from 1967 to 1973.",
+          "tier": 2,
+          "label": "Ministry of Education: Education Direction (English)",
+          "url": "https://www.moe.gov.my/en/dasarmenu/hala-tuju-pendidikan",
+          "lang": "en",
+          "quote": "in year 1 to year 6 of all primary schools"
+        },
+        {
+          "point": "The older English wording \"Standards 1 to 6\", still on the OpenDOSM English dataset page (checked 23 Nov 2026). Not used on this site.",
+          "tier": 1,
+          "label": "OpenDOSM dataset page (English): enrolment_school_district",
+          "url": "https://open.dosm.gov.my/data-catalogue/enrolment_school_district",
+          "lang": "en",
+          "quote": "primary (Standards 1 to 6)"
+        }
+      ],
       "alternatives": [
         {
           "ms": "Darjah",
@@ -273,6 +304,10 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
           "quote": "di sekolah kerajaan di peringkat nasional"
         }
+      ],
+      "ui_contains": [
+        "scope.gov",
+        "card.schools.title"
       ]
     },
     {
@@ -294,6 +329,9 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
           "quote": "Sekolah Rendah Kerajaan"
         }
+      ],
+      "ui_contains": [
+        "type.govprimary"
       ]
     },
     {
@@ -315,6 +353,9 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/schools_district",
           "quote": "Sekolah Menengah Kerajaan"
         }
+      ],
+      "ui_contains": [
+        "type.govsecondary"
       ]
     },
     {
@@ -542,6 +583,10 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/completion_school_state",
           "quote": "Kadar Tamat Pengajian"
         }
+      ],
+      "ui_key": "card.completion.title",
+      "ui_contains": [
+        "chart.completion.title"
       ]
     },
     {
@@ -620,6 +665,10 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/teachers_district",
           "quote": "Guru di Sekolah Kerajaan mengikut Daerah"
         }
+      ],
+      "ui_contains": [
+        "card.teachers.title",
+        "chart.teachers.title"
       ]
     },
     {
@@ -635,6 +684,10 @@
           "url": "https://open.dosm.gov.my/ms-MY/data-catalogue/enrolment_school_district",
           "quote": "Bilangan pelajar yang berdaftar"
         }
+      ],
+      "ui_contains": [
+        "card.students.title",
+        "chart.students.title"
       ]
     },
     {

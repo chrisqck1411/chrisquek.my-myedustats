@@ -1,0 +1,26 @@
+---
+import MeaningPanel from './MeaningPanel.astro';
+import { t, type Lang } from '../i18n';
+import type { Card } from '../lib/glance';
+
+interface Props {
+  lang: Lang;
+  card: Card;
+}
+const { lang, card } = Astro.props;
+---
+
+<article class="card" id={`glance-${card.id}`}>
+  <h3>{card.title}</h3>
+  <p class="card-asat">{card.asAt}</p>
+  <dl class="card-rows">
+    {card.rows.map((row) => (
+      <div class="card-row">
+        <dt>{row.label}</dt>
+        <dd>{row.value}</dd>
+      </div>
+    ))}
+  </dl>
+  <MeaningPanel lang={lang} counted={card.counted} keep={card.keep} sourceUrl={card.sourceUrl} />
+  {card.chartHref && <a class="card-link" href={card.chartHref}>{t(lang, 'chart.link')}</a>}
+</article>
