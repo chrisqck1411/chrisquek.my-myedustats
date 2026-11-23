@@ -59,5 +59,12 @@
   "chart.students.title": "Students in government schools, over the years",
   "chart.students.note": "As at {d1}, government schools had {l1} students. As at {d2}, the numbers were {l2}.",
   "chart.students.item": "{n} {stage}",
-  "list.and": "and"
+  "list.and": "and",
+  "chart.teachers.title": "Teachers in government schools, over the years",
+  "chart.teachers.note": "As at {d1}, government schools had {l1} teachers. As at {d2}, the numbers were {l2}.",
+  "chart.teachers.item": "{n} {stage}",
+  "chart.completion.title": "Completion rate, over the years",
+  "chart.completion.note": "As at {d1}, the completion rate was {l1}. As at {d2}, it was {l2}.",
+  "chart.completion.item": "{n} for {stage}",
+  "caveat.axis90": "The numbers on the left of the chart start at 90%, not 0%, so small changes can be seen."
 }

@@ -59,5 +59,12 @@
   "chart.students.title": "Pelajar di sekolah kerajaan, dari tahun ke tahun",
   "chart.students.note": "Setakat {d1}, sekolah kerajaan mempunyai {l1}. Setakat {d2}, bilangannya ialah {l2}.",
   "chart.students.item": "{n} pelajar peringkat {stage}",
-  "list.and": "dan"
+  "list.and": "dan",
+  "chart.teachers.title": "Guru di sekolah kerajaan, dari tahun ke tahun",
+  "chart.teachers.note": "Setakat {d1}, sekolah kerajaan mempunyai {l1}. Setakat {d2}, bilangannya ialah {l2}.",
+  "chart.teachers.item": "{n} guru peringkat {stage}",
+  "chart.completion.title": "Kadar tamat pengajian, dari tahun ke tahun",
+  "chart.completion.note": "Setakat {d1}, kadar tamat pengajian ialah {l1}. Setakat {d2}, kadarnya ialah {l2}.",
+  "chart.completion.item": "{n} bagi peringkat {stage}",
+  "caveat.axis90": "Nombor di sebelah kiri carta bermula pada 90%, bukan 0%, supaya perubahan kecil dapat dilihat."
 }

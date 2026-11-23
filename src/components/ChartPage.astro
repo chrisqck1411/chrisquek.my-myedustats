@@ -14,7 +14,7 @@ interface Props {
   chart: Chart;
 }
 const { lang, path, chart } = Astro.props;
-const payload = JSON.stringify({ lang, lines: chart.lines, asAtByTime: chart.asAtByTime });
+const payload = JSON.stringify({ lang, lines: chart.lines, asAtByTime: chart.asAtByTime, format: chart.format, yMin: chart.yMin, yMax: chart.yMax });
 ---
 
 <Base lang={lang} path={path} title={chart.title}>

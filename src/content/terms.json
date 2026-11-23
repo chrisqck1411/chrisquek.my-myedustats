@@ -584,7 +584,10 @@
           "quote": "Kadar Tamat Pengajian"
         }
       ],
-      "ui_key": "card.completion.title"
+      "ui_key": "card.completion.title",
+      "ui_contains": [
+        "chart.completion.title"
+      ]
     },
     {
       "status": "sourced",
@@ -664,7 +667,8 @@
         }
       ],
       "ui_contains": [
-        "card.teachers.title"
+        "card.teachers.title",
+        "chart.teachers.title"
       ]
     },
     {

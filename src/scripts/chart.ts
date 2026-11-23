@@ -15,6 +15,9 @@ interface ChartData {
   lang: 'en' | 'ms';
   lines: Line[];
   asAtByTime: Record<string, string>;
+  format: 'int' | 'pct';
+  yMin: number;
+  yMax?: number;
 }
 
 const SYMBOLS = ['circle', 'rect', 'triangle'];
@@ -35,7 +38,13 @@ function buildOption(data: ChartData) {
   const surface = cssVar('--surface');
   const colours = [cssVar('--s1'), cssVar('--s2'), cssVar('--s3')];
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const number = new Intl.NumberFormat('en-MY');
+  const isPct = data.format === 'pct';
+  const intFormat = new Intl.NumberFormat('en-MY');
+  const pctFormat = new Intl.NumberFormat('en-MY', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  /** Pop-up: the same text as the data table (1 decimal for a percentage). */
+  const tipNumber = (v: number) => (isPct ? `${pctFormat.format(v)}%` : intFormat.format(v));
+  /** Vertical scale labels: whole numbers, with a % sign for rates. */
+  const axisNumber = (v: number) => (isPct ? `${v}%` : intFormat.format(v));
 
   return {
     animation: !reduceMotion,
@@ -60,7 +69,7 @@ function buildOption(data: ChartData) {
         const list = Array.isArray(params) ? params : [params];
         const when = data.asAtByTime[String(list[0].value[0])] ?? '';
         const rows = list
-          .map((p: any) => `${p.marker} ${escapeHtml(String(p.seriesName))}: <strong>${number.format(p.value[1])}</strong>`)
+          .map((p: any) => `${p.marker} ${escapeHtml(String(p.seriesName))}: <strong>${tipNumber(p.value[1])}</strong>`)
           .join('<br/>');
         return `<div>${escapeHtml(when)}</div>${rows}`;
       },
@@ -74,8 +83,10 @@ function buildOption(data: ChartData) {
     },
     yAxis: {
       type: 'value',
-      min: 0,
-      axisLabel: { color: muted, fontSize: 13, formatter: (v: number) => number.format(v) },
+      min: data.yMin,
+      ...(data.yMax === undefined ? {} : { max: data.yMax }),
+      ...(isPct ? { interval: 2 } : {}),
+      axisLabel: { color: muted, fontSize: 13, formatter: axisNumber },
       splitLine: { lineStyle: { color: border } },
     },
     series: data.lines.map((line, i) => ({

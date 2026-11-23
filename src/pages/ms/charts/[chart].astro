@@ -1,0 +1,11 @@
+---
+import ChartPage from '../../../components/ChartPage.astro';
+import { buildChart, CHART_IDS, type ChartId } from '../../../lib/glance';
+
+export function getStaticPaths() {
+  return CHART_IDS.map((id) => ({ params: { chart: id } }));
+}
+const id = Astro.params.chart as ChartId;
+---
+
+<ChartPage lang="ms" path={`charts/${id}/`} chart={buildChart(id, 'ms')} />
