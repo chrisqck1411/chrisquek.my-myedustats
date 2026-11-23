@@ -2,6 +2,7 @@
 <clipPath id="badge1"><rect width="200" height="200" rx="44"/></clipPath>
 <rect width="200" height="200" rx="44" fill="#0b5cab"/>
 <g clip-path="url(#badge1)">
+<g transform="translate(200,0) scale(-1,1)">
 <clipPath id="s1"><path d="M10 120 C10 108 20 100 38 94 C62 86 86 72 104 58 C116 49 132 46 146 48 C166 50 190 56 214 68 L214 214 L124 214 C124 190 118 170 104 156 C90 148 74 144 62 140 C54 138 52 134 56 130 C50 134 40 138 30 138 C18 138 10 130 10 120 Z" transform="translate(20,24) scale(0.86)"/></clipPath>
 <g transform="translate(20,24) scale(0.86)">
 <ellipse cx="132" cy="38" rx="18" ry="21" fill="#fff" transform="rotate(-10 132 38)"/>
@@ -15,6 +16,6 @@
 <ellipse cx="17" cy="124" rx="2.6" ry="4.4" fill="#6a6a6a" transform="rotate(-10 21 123)"/>
 <path d="M56 133 C48 133 42 130 38 125" fill="none" stroke="#6a6a6a" stroke-width="2.4" stroke-linecap="round"/>
 </g>
-</g>
+</g></g>
 <rect x="2" y="2" width="196" height="196" rx="42" fill="none" stroke="#0b3d6b" stroke-width="4"/>
 </svg>
