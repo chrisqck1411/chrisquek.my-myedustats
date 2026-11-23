@@ -1,0 +1,56 @@
+{
+  "schools_district": {
+    "title": "Schools and institutions by district",
+    "columns": ["date", "state", "district", "stage", "type", "schools"],
+    "measure": "schools",
+    "kind": "count",
+    "hasDistrict": true,
+    "dimensions": ["stage", "type"],
+    "storage": "education"
+  },
+  "enrolment_school_district": {
+    "title": "Student enrolment by district",
+    "columns": ["date", "state", "district", "stage", "sex", "students"],
+    "measure": "students",
+    "kind": "count",
+    "hasDistrict": true,
+    "dimensions": ["stage", "sex"],
+    "storage": "education"
+  },
+  "teachers_district": {
+    "title": "Teachers by district",
+    "columns": ["date", "state", "district", "stage", "sex", "teachers"],
+    "measure": "teachers",
+    "kind": "count",
+    "hasDistrict": true,
+    "dimensions": ["stage", "sex"],
+    "storage": "education"
+  },
+  "completion_school_state": {
+    "title": "School completion rate by state",
+    "columns": ["date", "state", "stage", "sex", "completion"],
+    "measure": "completion",
+    "kind": "percent",
+    "hasDistrict": false,
+    "dimensions": ["stage", "sex"],
+    "storage": "education"
+  },
+  "completion_school_district": {
+    "title": "School completion rate by district (education office area)",
+    "columns": ["date", "state", "district", "stage", "completion"],
+    "measure": "completion",
+    "kind": "percent",
+    "hasDistrict": true,
+    "dimensions": ["stage"],
+    "storage": "education"
+  },
+  "lecturers_uni": {
+    "title": "Lecturers and academic staff at public universities",
+    "columns": ["date", "state", "university", "citizenship", "sex", "staff"],
+    "measure": "staff",
+    "kind": "count",
+    "hasDistrict": false,
+    "dimensions": ["university", "citizenship", "sex"],
+    "storage": "education"
+  }
+}
