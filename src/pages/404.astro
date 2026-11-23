@@ -1,13 +1,56 @@
 ---
 import Base from '../layouts/Base.astro';
 import { t, pathFor } from '../i18n';
+import register from '../content/quotes.json';
+
+const { quotes, fallback } = register;
 ---
 
 <!-- Shown for any address that does not exist. It is served at the address that was asked for,
-     so it cannot know the visitor's language and shows both. -->
+     so it cannot know the visitor's language and shows both. The message and home links stay on
+     top; below them the tapir shows one education quote (src/content/quotes.json, every quote has
+     a source link). All quotes are in the page; only the fallback shows if the script does not run,
+     and src/scripts/quote.ts then shows a different one on each visit. -->
 <Base lang="en" path="" title={t('en', 'notfound.title')} noindex singleLanguage>
   <h1>{t('en', 'notfound.title')}</h1>
   <p class="lead">{t('en', 'notfound.text')} <a href={pathFor('en', '')}>{t('en', 'notfound.home')}</a>.</p>
   <h2 lang="ms">{t('ms', 'notfound.title')}</h2>
   <p lang="ms">{t('ms', 'notfound.text')} <a href={pathFor('ms', '')}>{t('ms', 'notfound.home')}</a>.</p>
+
+  <div class="hero notfound-quote">
+    <div class="hero-mascot">
+      <img src="/mascot/researcher.webp" width="499" height="700" alt="" />
+    </div>
+    <div class="hero-text">
+      {
+        quotes.map((q) => (
+          <figure class="quote" data-quote={q.id} hidden={q.id !== fallback}>
+            <blockquote>
+              {q.original && (
+                <p class="quote-original" lang={q.original.language}>
+                  {q.original.text}
+                </p>
+              )}
+              <p lang={q.language}>{q.text}</p>
+            </blockquote>
+            <figcaption>
+              <strong>{q.author}</strong>, {q.work}, {q.date}.
+              {q.translation && (
+                <span>
+                  {' '}
+                  Translation: {q.translation.translator} ({q.translation.year}).
+                </span>
+              )}{' '}
+              <a href={q.sourceUrl} rel="noopener noreferrer">
+                {t('en', 'quote.source')} / {t('ms', 'quote.source')}
+              </a>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+  <script>
+    import '../scripts/quote.ts';
+  </script>
 </Base>

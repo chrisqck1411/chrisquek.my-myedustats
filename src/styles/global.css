@@ -199,6 +199,19 @@ h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.15; margin: 0 0 0.75r
   .hero-mascot { max-width: 190px; }
 }
 
+/* 404 quote */
+.notfound-quote { margin-top: 2.5rem; }
+.quote { margin: 0; }
+.quote[hidden] { display: none; }
+.quote blockquote {
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0 0.25rem 1.1rem;
+  border-left: 4px solid var(--accent, var(--primary));
+}
+.quote blockquote p { margin: 0; font-size: 1.35rem; line-height: 1.45; color: var(--heading); }
+.quote .quote-original { font-size: 1.6rem; margin-bottom: 0.4rem; }
+.quote figcaption { color: var(--muted); font-size: 0.95rem; max-width: 40rem; }
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);
